@@ -20,7 +20,7 @@
 
 	// IF REGISTER BUTTON IS PRESSED
 	if(isset($_POST['register_button'])) {
-		
+
 		// ASSIGNING REG_FNAME FORM VALUE TO $FIRST_NAME VARIABLE
 		$first_name = strip_tags($_POST['reg_fname']); // REMOVE HTML TAGS
 		$first_name = str_replace(' ', '', $first_name); // REMOVE SPACES
@@ -53,6 +53,31 @@
 
 		// ASSIGNING USER CREATION DATE (EX. 2018-10-31)
 		$date = date('Y-m-d');
+
+		// CHECK IF EMAIL AND EMAIL2 MATCH
+		if ($email == $email2) {
+			// CHECK IF EMAIL IS IN PROPER FORMAT
+			if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+				// ASSIGN PROPERLY FORMATTED EMAIL TO $EMAIL VARIABLE
+				$email = filter_var($email, FILTER_VALIDATE_EMAIL);
+
+				// CHECK IF EMAIL IS ALREADY REGISTERED
+				$e_check = mysqli_query($connection, "SELECT email FROM users WHERE email='$email'");
+				// COUNT THE NUMBER OF ROWS RETURNED
+				$num_rows = mysqli_num_rows($e_check);
+
+				// CHECK IF QUERY RETURNS ANY ROWS (EMAIL TAKEN)
+				if($num_rows > 0) {
+					array_push($error_array, 'email in use');
+				}
+				// INPROPER FORMAT ERROR
+			} else {
+				array_push($error_array, 'invalid format');
+			}
+			// UNMATCHING EMAIL ERROR
+		} else {
+			array_push($error_array, 'emails do not match');
+		}
 	}
 
 ?>
