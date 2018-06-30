@@ -1,3 +1,62 @@
+<?php
+
+	// CREATE CONNECTION VARIABLE
+	$con = mysqli_connect('localhost', 'root', 'root', 'jungle_db');
+
+	// CHECK FOR CONNECTION ERROR
+	if(mysqli_connect_errno()) {
+		echo "Failed to connect: " + mysqli_connect_errno();
+	}
+
+	// DECLARING VARIABLES TO PREVENT ERRORS
+	$first_name = ''; // FIRST NAME
+	$last_name = ''; // LAST NAME
+	$email = ''; // EMAIL
+	$email2 = ''; // EMAIL 2
+	$password = ''; // PASSWORD
+	$password2 = ''; // PASSWORD 2
+	$date = ''; // SIGN UP DATE
+	$error_array = array(); // HOLD ERROR MESSAGES
+
+	// IF REGISTER BUTTON IS PRESSED
+	if(isset($_POST['register_button'])) {
+		
+		// ASSIGNING REG_FNAME FORM VALUE TO $FIRST_NAME VARIABLE
+		$first_name = strip_tags($_POST['reg_fname']); // REMOVE HTML TAGS
+		$first_name = str_replace(' ', '', $first_name); // REMOVE SPACES
+		$first_name = ucfirst(strtolower($first_name)); // CAPITALIZE FIRST LETTER ONLY
+		$_SESSION['reg_fname'] = $first_name; // STORES FIRST NAME INTO SESSION VARIABLE
+
+		// ASSIGNING REG_LNAME FORM VALUE TO $LAST_NAME VARIABLE
+		$last_name = strip_tags($_POST['reg_lname']); // REMOVE HTML TAGS
+		$last_name = str_replace(' ', '', $last_name); // REMOVE SPACES
+		$last_name = ucfirst(strtolower($last_name)); // CAPITALIZE FIRST LETTER ONLY
+		$_SESSION['reg_lname'] = $last_name; // STORES LAST NAME INTO SESSION VARIABLE
+
+		// ASSIGNING REG_EMAIL FORM VALUE TO $EMAIL VARIABLE
+		$email = strip_tags($_POST['reg_email']); // REMOVE HTML TAGS
+		$email = str_replace(' ', '', $email); // REMOVE SPACES
+		$email = strtolower($email); // LOWERCASE ALL EMAIL LETTERS
+		$_SESSION['reg_email'] = $email; // STORES EMAIL INTO SESSION VARIABLE
+
+		// ASSIGNING REG_EMAIL2 FORM VALUE TO $EMAIL2 VARIABLE
+		$email2 = strip_tags($_POST['reg_email2']); // REMOVE HTML TAGS
+		$email2 = str_replace(' ', '', $email2); // REMOVE SPACES
+		$email2 = strtolower($email2); // LOWERCASE ALL EMAIL LETTERS
+		$_SESSION['reg_email2'] = $email2; // STORES EMAIL2 INTO SESSION VARIABLE
+
+		// ASSIGNING REG_PASSWORD FORM VALUE TO $PASSWORD VARIABLE
+		$password = strip_tags($_POST['reg_password']); // REMOVE HTML TAGS
+
+		// ASSIGNING REG_PASSWORD2 FORM VALUE TO $PASSWORD2 VARIABLE
+		$password2 = strip_tags($_POST['reg_password2']); // REMOVE HTML TAGS
+
+		// ASSIGNING USER CREATION DATE (EX. 2018-10-31)
+		$date = date('Y-m-d');
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
