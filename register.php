@@ -73,7 +73,7 @@
 
 						<!-- EMAIL ADDRESS INPUT -->
 						<div class="input-group">
-					    <input type="email" class="form-control form-control-lg" name="log_email" placeholder="Email Address" value="<?php if (isset($_SESSION['log_email'])) { echo $_SESSION['log_email']; } ?>" required />
+					    <input type="email" class="form-control form-control-lg" name="log_email" placeholder="Email Address" value="<?php if (isset($_SESSION['log_email'])) { echo $_SESSION['log_email']; } ?>" autocomplete="off" required />
 					    <div class="input-group-append">
 			          <span class="input-group-text" id="inputGroupAppend">
 			          	<i class="fas fa-at fa-2x"></i>
@@ -122,7 +122,7 @@
 
 						<!-- FIRST NAME INPUT -->
 						<div class="input-group">
-							<input type="text" class="form-control form-control-lg" name="reg_fname" placeholder="First Name" value="<?php if (isset($_SESSION['reg_fname'])) { echo $_SESSION['reg_fname']; } ?>" required />
+							<input type="text" class="form-control form-control-lg" name="reg_fname" placeholder="First Name" value="<?php if (isset($_SESSION['reg_fname'])) { echo $_SESSION['reg_fname']; } ?>" autocomplete="off" required />
 							<div class="input-group-append">
 			          <span class="input-group-text" id="inputGroupAppend">
 			          	<i class="fas fa-user fa-2x"></i>
@@ -139,7 +139,7 @@
 
 						<!-- LAST NAME INPUT -->
 						<div class="input-group">
-							<input type="text" class="form-control form-control-lg" name="reg_lname" placeholder="Last Name" value="<?php if (isset($_SESSION['reg_lname'])) { echo $_SESSION['reg_lname']; } ?>" required />
+							<input type="text" class="form-control form-control-lg" name="reg_lname" placeholder="Last Name" value="<?php if (isset($_SESSION['reg_lname'])) { echo $_SESSION['reg_lname']; } ?>" autocomplete="off" required />
 							<div class="input-group-append">
 			          <span class="input-group-text" id="inputGroupAppend">
 			          	<i class="fas fa-user fa-2x"></i>
@@ -156,7 +156,7 @@
 
 						<!-- EMAIL 1 INPUT -->
 						<div class="input-group">
-							<input type="email" class="form-control form-control-lg" name="reg_email" placeholder="Email Address" value="<?php if (isset($_SESSION['reg_email'])) { echo $_SESSION['reg_email']; } ?>" required />
+							<input type="email" class="form-control form-control-lg" name="reg_email" placeholder="Email Address" value="<?php if (isset($_SESSION['reg_email'])) { echo $_SESSION['reg_email']; } ?>" autocomplete="off" required />
 							<div class="input-group-append">
 			          <span class="input-group-text" id="inputGroupAppend">
 			          	<i class="fas fa-at fa-2x"></i>
@@ -168,7 +168,7 @@
 
 						<!-- EMAIL 2 INPUT -->
 						<div class="input-group">
-							<input type="email" class="form-control form-control-lg" name="reg_email2" placeholder="Confirm Email Address" value="<?php if (isset($_SESSION['reg_email2'])) { echo $_SESSION['reg_email2']; } ?>" required />
+							<input type="email" class="form-control form-control-lg" name="reg_email2" placeholder="Confirm Email Address" value="<?php if (isset($_SESSION['reg_email2'])) { echo $_SESSION['reg_email2']; } ?>" autocomplete="off" required />
 							<div class="input-group-append">
 			          <span class="input-group-text" id="inputGroupAppend">
 			          	<i class="fas fa-at fa-2x"></i>
