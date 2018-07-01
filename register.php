@@ -3,7 +3,7 @@
 	session_start();
 
 	// CREATE CONNECTION VARIABLE
-	$con = mysqli_connect('localhost', 'root', 'root', 'jungle_db');
+	$connection = mysqli_connect('localhost', 'root', 'root', 'jungle_db');
 
 	// CHECK FOR CONNECTION ERROR
 	if(mysqli_connect_errno()) {
@@ -80,9 +80,8 @@
 		} else {
 			array_push($error_array, 'emails do not match');
 		}
-	}
 
-	// CHECK FIRST NAME LENGTH
+		// CHECK FIRST NAME LENGTH
 		if (strlen($first_name) > 25 || strlen($first_name) < 2) {
 			array_push($error_array, 'first name length');
 		}
@@ -105,6 +104,44 @@
 		if (strlen($password) > 30 || strlen($password) < 5) {
 			array_push($error_array, 'password length');
 		}
+
+		// IF THERE ARE NO ERRORS IN USER SIGN UP DETAILS...
+		if (empty($error_array)) {
+
+			// ENCRYPT PASSWORD BEFORE SENT TO DATABASE
+			$password = md5(md5($email).$password);
+			// GENERATE USERNAME BY CONCATENATING FIRST AND LAST NAME
+			$username = strtolower($first_name . '_' . $last_name);
+			// QUERY TO CHECK IF USERNAME IS ALREADY TAKEN
+			$check_username_query = mysqli_query($connection, "SELECT username FROM users WHERE username='$username'");
+
+			$i = 0;
+			// IF USERNAME ALREADY EXISTS ADD NUMBER TO CREATE NEW USERNAME
+			while (mysqli_num_rows($check_username_query) != 0) {
+				$i++; // ADD 1 TO $I AND CONCATENATE TO USERNAME
+				$username = $username . '_' . $i;
+				// QUERY TO CHECK USERNAME EXISTENCE AGAIN
+				$check_username_query = mysqli_query($connection, "SELECT username FROM users WHERE username='$username'");
+			}
+
+			// INSERT NEW USER VALUES INTO DATABASE
+			$query = mysqli_query($connection, "INSERT INTO users VALUES ('', '$first_name', '$last_name', '$username', '$email', '$password', '$date', 'no', ',')");
+
+			// PUSH SUCCESSFUL SIGN UP MESSAGE TO $ERROR_ARRAY
+			array_push($error_array, 'successful signup');
+
+			// CLEAR SESSION VARIABLES
+			$_SESSION['reg_fname'] = '';
+			$_SESSION['reg_lname'] = '';
+			$_SESSION['reg_email'] = '';
+			$_SESSION['reg_email2'] = '';
+		}
+
+	}
+
+	
+
+
 
 ?>
 
@@ -137,21 +174,124 @@
 </head>
 <body>
 
-		<form action="register.php" method="POST">
-			<input type="text" name="reg_fname" placeholder="First Name" required />
-			<br />
-			<input type="text" name="reg_lname" placeholder="Last Name" required />
-			<br />
-			<input type="email" name="reg_email" placeholder="Email" required />
-			<br />
-			<input type="email" name="reg_email2" placeholder="Confirm Email" required />
-			<br />
-			<input type="password" name="reg_password" placeholder="Password" required />
-			<br />
-			<input type="password" name="reg_password2" placeholder="Confirm Password" required />
-			<br />
-			<input type="submit" name="register_button" value="Register" />
-		</form>
+	<!-- SIGN UP FORM -->
+	<form action="register.php" method="POST">
+
+		<!-- FIRST NAME INPUT -->
+		<div class="input-group">
+			<input type="text" class="form-control form-control-lg" name="reg_fname" placeholder="First Name" value="<?php if (isset($_SESSION['reg_fname'])) { echo $_SESSION['reg_fname']; } ?>" required />
+			<div class="input-group-append">
+        <span class="input-group-text" id="inputGroupAppend">
+        	<i class="fas fa-user fa-2x"></i>
+        </span>
+      </div>
+		</div>
+		<br />
+		<!-- END FIRST NAME INPUT -->
+
+		<!-- FIRST NAME ERROR MESSAGE -->
+		<?php if (in_array('first name length', $error_array)) {
+			echo '<div class="alert alert-danger" role="alert">your first name must be between 2 and 25 characters</div><br />';
+		} ?>
+
+		<!-- LAST NAME INPUT -->
+		<div class="input-group">
+			<input type="text" class="form-control form-control-lg" name="reg_lname" placeholder="Last Name" value="<?php if (isset($_SESSION['reg_lname'])) { echo $_SESSION['reg_lname']; } ?>" required />
+			<div class="input-group-append">
+        <span class="input-group-text" id="inputGroupAppend">
+        	<i class="fas fa-user fa-2x"></i>
+        </span>
+      </div>
+		</div>
+		<br />
+		<!-- END LAST NAME INPUT -->
+
+		<!-- LAST NAME ERROR MESSAGE -->
+		<?php if (in_array('last name length', $error_array)) {
+			echo '<div class="alert alert-danger" role="alert">your last name must be between 2 and 25 characters</div><br />';
+		} ?>
+
+		<!-- EMAIL 1 INPUT -->
+		<div class="input-group">
+			<input type="email" class="form-control form-control-lg" name="reg_email" placeholder="Email Address" value="<?php if (isset($_SESSION['reg_email'])) { echo $_SESSION['reg_email']; } ?>" required />
+			<div class="input-group-append">
+        <span class="input-group-text" id="inputGroupAppend">
+        	<i class="fas fa-at fa-2x"></i>
+        </span>
+      </div>
+		</div>
+		<br />
+		<!-- END EMAIL 1 INPUT -->
+
+		<!-- EMAIL 2 INPUT -->
+		<div class="input-group">
+			<input type="email" class="form-control form-control-lg" name="reg_email2" placeholder="Confirm Email Address" value="<?php if (isset($_SESSION['reg_email2'])) { echo $_SESSION['reg_email2']; } ?>" required />
+			<div class="input-group-append">
+        <span class="input-group-text" id="inputGroupAppend">
+        	<i class="fas fa-at fa-2x"></i>
+        </span>
+      </div>
+		</div>
+		<br />
+		<!-- END EMAIL 2 INPUT -->
+
+		<!-- EMAIL ERROR MESSAGES -->
+		<?php if (in_array('email in use', $error_array)) {
+			echo '<div class="alert alert-danger" role="alert">email already in use</div><br />';
+		} else if (in_array('invalid format', $error_array)) {
+			echo '<div class="alert alert-danger" role="alert">invalid email format</div><br />';
+		} else if (in_array('emails do not match', $error_array)) {
+			echo '<div class="alert alert-danger" role="alert">your emails do not match</div><br />';
+		} ?>
+
+		<!-- PASSWORD 1 INPUT -->
+		<div class="input-group">
+			<input type="password" class="form-control form-control-lg" name="reg_password" placeholder="Password" required />
+			<div class="input-group-append">
+        <span class="input-group-text" id="inputGroupAppend">
+        	<i class="fas fa-key fa-2x"></i>
+        </span>
+      </div>
+		</div>
+		<br />
+		<!-- END PASSWORD 1 INPUT -->
+
+		<!-- PASSWORD 2 INPUT -->
+		<div class="input-group">
+			<input type="password" class="form-control form-control-lg" name="reg_password2" placeholder="Confirm Password" required />
+			<div class="input-group-append">
+        <span class="input-group-text" id="inputGroupAppend">
+        	<i class="fas fa-key fa-2x"></i>
+        </span>
+      </div>
+		</div>
+		<br />
+		<!-- END PASSWORD 2 INPUT -->
+
+		<!-- PASSWORD ERROR MESSAGES -->
+		<?php if (in_array('password characters', $error_array)) {
+			echo '<div class="alert alert-danger" role="alert">your password can only contain english characters or numbers</div><br />';
+		} else if (in_array('password length', $error_array)) {
+			echo '<div class="alert alert-danger" role="alert">your password must be between 5 and 30 characters</div><br />';
+		} else if (in_array('passwords do not match', $error_array)) {
+			echo '<div class="alert alert-danger" role="alert">your passwords do not match</div><br />';
+		} ?>
+
+		<!-- SUCCESSFUL SIGN UP MESSAGE -->
+		<?php if (in_array('successful signup', $error_array)) {
+			echo '<div class="alert alert-success" role="alert">You\'re all set! Go ahead and login!</span></div><br />';
+		} ?>
+
+		<!-- SIGN UP SUBMIT BUTTON -->
+		<button type="submit" class="btn btn-primary btn-lg" name="register_button">
+			Sign Up
+		</button>
+		<br />
+		<!-- SIGN IN FORM LINK -->
+		<a href="#" id="signin" class="signin">Already have an account? Log in here!</a>
+		<br /><br />
+	</form>
+	<!-- END SIGN UP FORM -->
 
 </body>
 </html>
