@@ -243,7 +243,7 @@
 	<!-- END LOGIN/REGISTER INFO PANEL -->
 
 <!-- CUSTOM JS LINK -->
-<!-- <script src="assets/js/register.js"></script> -->
+<script src="assets/js/register.js"></script>
 
 </body>
 </html>
