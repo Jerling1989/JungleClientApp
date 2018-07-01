@@ -58,8 +58,7 @@
 
 				<!-- LOGIN HEADER -->
 				<div id="login-header">
-					<h1>ECHO CHAMBER</h1>
-					<h4>Where People Come to Never Change Their Opinion on Anything!</h4>
+					<img src="assets/img/icons/logo.png" class="img-fluid" alt="Responsive image">
 					<br /><br />
 					<p><i class="fas fa-caret-down fa-lg"></i> Login or Sign Up below! <i class="fas fa-caret-down fa-lg"></i></p>
 				</div>
