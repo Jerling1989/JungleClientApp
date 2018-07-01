@@ -5,7 +5,7 @@
 
 	// CHECK FOR CONNECTION ERROR
 	if(mysqli_connect_errno()) {
-		echo "Failed to connect: " + mysqli_connect_errno();
+		echo "Failed to connect: " . mysqli_connect_errno();
 	}
 
 	// DECLARING VARIABLES TO PREVENT ERRORS
@@ -79,6 +79,30 @@
 			array_push($error_array, 'emails do not match');
 		}
 	}
+
+	// CHECK FIRST NAME LENGTH
+		if (strlen($first_name) > 25 || strlen($first_name) < 2) {
+			array_push($error_array, 'first name length');
+		}
+		// CHECK LAST NAME LENGTH
+		if (strlen($last_name) > 25 || strlen($last_name) < 2) {
+			array_push($error_array, 'last name length');
+		}
+
+		// CHECK FOR MATCHING PASSWORDS
+		if ($password != $password2) {
+			array_push($error_array, 'passwords do not match');
+		} else {
+			// CHECK IF PASSWORD USES ENGLISH LETTERS (ADDED SPECIAL CHARACTERS)
+			if (preg_match('/[^A-Za-z0-9\.\+!@#$%^&*()]/', $password)) {
+				array_push($error_array, 'password characters');
+			}
+		}
+
+		// CHECK PASSWORD LENGTH
+		if (strlen($password) > 30 || strlen($password) < 5) {
+			array_push($error_array, 'password length');
+		}
 
 ?>
 
