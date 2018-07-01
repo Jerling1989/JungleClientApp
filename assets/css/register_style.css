@@ -16,23 +16,10 @@ body {
   background-size: cover;
 }
 
-h1 {
-	padding: 10px;
-	/*color: white;*/
-	font-family: 'Contrail One', cursive;
-	font-size: 60px;
-}
-
-h4 {
-	/*color: white;*/
-	font-family: 'Roboto', sans-serif;
-	font-size: 23px;
-	padding: 10px;
-}
-
 p {
-	/*color: white;*/
 	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	color: #262727;
 	font-size: 20px;
 	padding: 10px;
 }
@@ -40,12 +27,12 @@ p {
 a {
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
-	/*color: #E9ECEF;*/
+	color: #262727;
 	font-weight: bold;
 }
 
 a:hover {
-	color: #057aff;
+	color: #262727;
 }
 
 
@@ -62,7 +49,7 @@ a:hover {
 }
 
 #login-header {
-	border-bottom: 1px solid #FFFFFF;
+	border-bottom: 1px solid #262727;
 	margin-bottom: 10px;
 }
 
@@ -70,6 +57,16 @@ a:hover {
 	margin-bottom: 20px;
 	padding: 5px 30px 5px 30px;
 	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	background-color: #f5c562;
+	border: 2.5px solid #262727;
+	color: #262727;
+}
+
+.btn-primary:hover {
+	background-color: #262727;
+	border: 2.5px solid #262727;
+	color: #f5c562;
 }
 
 .alert-success {
@@ -90,20 +87,24 @@ a:hover {
 /* FORM INPUT STYLES */
 .input-group {
 	margin-bottom: 10px;
-	border: 2px grey solid;
+	border: 5px solid #262727;
+	border-radius: 10px;
 }
 
-.input-group-append {
+.input-group-text {
+	color: #262727;
+	background-color: #f5c562;
 	border: none;
 }
 
 input[type='text'], input[type='email'], input[type='password'] {
-	border: 5px solid #E9ECEF;
+	/*border: 5px solid #262727;*/
+	border: none;
 	font-family: 'Roboto', sans-serif;
 }
 
 input[type='text']:hover, input[type='email']:hover, input[type='password']:hover {
-	border-color: #3498DB;
+	/*border-color: #3498DB;*/
 }
 
 
