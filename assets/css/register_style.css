@@ -1,0 +1,123 @@
+/* GENERAL STYLES */
+html {
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	width: 100%;
+	background-image: url(../img/backgrounds/jungle-bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*background-color: #000;*/
+}
+
+h1 {
+	padding: 10px;
+	/*color: white;*/
+	font-family: 'Contrail One', cursive;
+	font-size: 60px;
+}
+
+h4 {
+	/*color: white;*/
+	font-family: 'Roboto', sans-serif;
+	font-size: 23px;
+	padding: 10px;
+}
+
+p {
+	/*color: white;*/
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	padding: 10px;
+}
+
+a {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	/*color: #E9ECEF;*/
+	font-weight: bold;
+}
+
+a:hover {
+	color: #057aff;
+}
+
+
+/* LOGIN/REGISTER PANEL STYLES */
+#login-panel {
+	width: 80%;
+	height: auto;
+	margin: auto;
+	/*background-color: rgba(0, 0, 0, 0.75);*/
+	border-radius: 10px;
+	margin-top: 80px;
+	margin-bottom: 25px;
+	padding: 20px;
+}
+
+#login-header {
+	border-bottom: 1px solid #FFFFFF;
+	margin-bottom: 10px;
+}
+
+.btn-primary {
+	margin-bottom: 20px;
+	padding: 5px 30px 5px 30px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.alert-success {
+	background-color: #249D3D;
+	color: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+	border: none;
+}
+
+.alert-danger {
+	background-color: #D72E3D;
+	color: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+	border: none;
+}
+
+
+/* FORM INPUT STYLES */
+.input-group {
+	margin-bottom: 10px;
+	border: 2px grey solid;
+}
+
+.input-group-append {
+	border: none;
+}
+
+input[type='text'], input[type='email'], input[type='password'] {
+	border: 5px solid #E9ECEF;
+	font-family: 'Roboto', sans-serif;
+}
+
+input[type='text']:hover, input[type='email']:hover, input[type='password']:hover {
+	border-color: #3498DB;
+}
+
+
+/* KEEP REGISTER TAB HIDDEN UPON PAGE LOAD */
+#second {
+	display: none;
+}
+
+
+/*~ MOBILE CELLPHONE PORTRAIT SCREEN ~~*/
+@media screen and (max-width: 575.98px) {
+	#login-panel {
+		margin-top: 25px;
+		margin-bottom: 80px;
+	}
+}
