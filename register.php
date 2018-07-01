@@ -1,5 +1,7 @@
 <?php
 
+	session_start();
+
 	// CREATE CONNECTION VARIABLE
 	$con = mysqli_connect('localhost', 'root', 'root', 'jungle_db');
 
@@ -109,7 +111,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- PAGE TITLE -->
 	<title>Welcome to the Jungle!</title>
+	<!-- FAVICON -->
+	<link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon" />
+	<!-- META DATA -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- FONT AWESOME -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Contrail+One|Roboto" rel="stylesheet">
+  <!-- BOOTSTRAP CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- RESET CSS LINK -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+	<!-- REGISTER PAGE CSS LINK -->
+	<link rel="stylesheet" type="text/css" href="assets/css/register_style.css" />
+	<!-- JQUERY CDN LINK -->
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
 </head>
 <body>
 
