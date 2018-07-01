@@ -26,6 +26,7 @@ p {
 
 a {
 	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
 	text-decoration: none;
 	color: #262727;
 	font-weight: bold;
@@ -49,7 +50,7 @@ a:hover {
 }
 
 #login-header {
-	border-bottom: 1px solid #262727;
+	border-bottom: 2px solid #262727;
 	margin-bottom: 10px;
 }
 
@@ -98,13 +99,8 @@ a:hover {
 }
 
 input[type='text'], input[type='email'], input[type='password'] {
-	/*border: 5px solid #262727;*/
 	border: none;
 	font-family: 'Roboto', sans-serif;
-}
-
-input[type='text']:hover, input[type='email']:hover, input[type='password']:hover {
-	/*border-color: #3498DB;*/
 }
 
 
