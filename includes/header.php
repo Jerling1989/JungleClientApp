@@ -1,6 +1,10 @@
 <?php
-
+	
+	// INCLUDE NECCESSARY FILES AND SCRIPTS
 	require 'config/config.php';
+	include('includes/classes/User.php');
+	// include('includes/classes/Client.php');
+	include('includes/classes/Task.php');
 
 	// CHECK IF USER IS SIGNED IN
 	if(isset($_SESSION['username'])) {
@@ -109,6 +113,6 @@
 	<!-- END TOP NAV BAR -->
 
 	<br /><br /><br /><br />
-	
+
 	<!-- WRAPPER DIV -->
 	<div class="wrapper container" id="wrapper">

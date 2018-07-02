@@ -1,11 +1,21 @@
 <?php
 	include('includes/header.php');
-	// session_destroy();
+	include('includes/form_handlers/client_handler.php');
+
+	$user_obj = new User($connection, $userLoggedIn);
+
 ?>
 	<div  class="text-center">
-		<p>Welcome to the Jungle <?php echo $user['first_name'] . ' ' . $user['last_name']; ?>!</p>
+		<h2>Welcome to the Jungle <?php echo $user_obj->getFirstAndLastName(); ?>!</h2>
 		<p>Your Client List</p>
 	</div>
+
+	<form class="" action="index.php" method="POST">
+		<input type="text" name="first_name" placeholder="First Name" required />
+		<input type="text" name="last_name" placeholder="Last Name" required />
+		<input type="text" name="company" placeholder="Company" required />
+		<input type="submit" name="add_client" value="Add Client" />
+	</form>
 
 	<table class="table table-dark">
 	  <thead>
