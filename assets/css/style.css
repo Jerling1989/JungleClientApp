@@ -17,6 +17,11 @@
 	margin-top: 5px;
 }
 
+nav button {
+	background-color: #262727 !important;
+	color: #F5C562 !important;
+}
+
 #search_text_input {
 	border: 2.5px #F5C562 solid;
 	border-radius: 20px;

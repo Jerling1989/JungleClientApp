@@ -74,7 +74,7 @@
 
 			<!-- COLLAPSE TOGGLE BUTTON (MOBILE) -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
+		    <i class="fas fa-bars fa-2x"></i>
 		  </button>
 
 			<!-- NAVIGATION LIST COLLAPSABLE -->
