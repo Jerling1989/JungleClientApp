@@ -58,6 +58,10 @@ table {
 	z-index: -1;
 }
 
+table a {
+	color: white;
+}
+
 th {
 	color: #F5C562;
 }
@@ -72,5 +76,8 @@ tr {
 
 tr:hover {
 	background-color: #F5C562;
+}
+
+tr:hover a {
 	color: #262727;
 }

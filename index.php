@@ -27,49 +27,35 @@
 	    </tr>
 	  </thead>
 	  <tbody>
-	    <tr>
-	      <td>1</td>
-	      <td>Mark</td>
-	      <td>Otto</td>
-	      <td>Applebee's</td>
-	    </tr>
-	    <tr>
-	      <td>2</td>
-	      <td>Jacob</td>
-	      <td>Thornton</td>
-	      <td>Dallas BMW</td>
-	    </tr>
-	    <tr>
-	      <td>3</td>
-	      <td>Sarah</td>
-	      <td>Murphy</td>
-	      <td>SmartStyle</td>
-	    </tr>
+	    <?php 
+				$str = '';
+				$data_query = mysqli_query($connection, "SELECT * FROM clients WHERE client_closed='no' ORDER BY id ASC");
+
+				if (mysqli_num_rows($data_query) > 0) {
+					// LOOP THROUGH QUERY RESULTS ARRAY
+					while ($row = mysqli_fetch_array($data_query)) {
+						// CREATE POST VARIABLES
+						$id = $row['id'];
+						$first_name = $row['first_name'];
+						$last_name = $row['last_name'];
+						$company = $row['company_name'];
+						$username = $row['username'];
+
+						$str = "
+										<tr>
+											<td><a href='$username'>$id</a></td>
+											<td><a href='$username'>$first_name</a></td>
+											<td><a href='$username'>$last_name</a></td>
+											<td><a href='$username'>$company</a></td>
+										</tr>";
+						echo $str;
+					}
+				}
+			?>
 	  </tbody>
 	</table>
 
-	<?php 
-
-		$str = '';
-		$data_query = mysqli_query($connection, "SELECT * FROM clients WHERE client_closed='no' ORDER BY id ASC");
-
-		if (mysqli_num_rows($data_query) > 0) {
-			// LOOP THROUGH QUERY RESULTS ARRAY
-			while ($row = mysqli_fetch_array($data_query)) {
-				// CREATE POST VARIABLES
-				$id = $row['id'];
-				$first_name = $row['first_name'];
-				$last_name = $row['last_name'];
-				$company = $row['company_name'];
-
-				$str = "<div><p>$id $first_name $last_name $company</p></div>";
-				echo $str;
-			}
-			
-		}
-		
-
-	?>
+	
 
 	
 
