@@ -107,6 +107,8 @@
 		</div>
 	</nav>
 	<!-- END TOP NAV BAR -->
-	<br /><br /><br /><br /><br /><br />
+
+	<br /><br /><br /><br />
+	
 	<!-- WRAPPER DIV -->
 	<div class="wrapper container" id="wrapper">

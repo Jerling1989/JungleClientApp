@@ -51,3 +51,26 @@ nav button {
 .mobile-nav {
 	display: none;
 }
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLIENT TABLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+table {
+	z-index: -1;
+}
+
+th {
+	color: #F5C562;
+}
+
+#table-heading:hover {
+	background-color: #262727;
+}
+
+tr {
+	background-color: #262727;
+}
+
+tr:hover {
+	background-color: #F5C562;
+	color: #262727;
+}
