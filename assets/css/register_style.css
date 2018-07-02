@@ -70,6 +70,13 @@ a:hover {
 	color: #f5c562;
 }
 
+.btn-primary:active {
+	background-color: #262727 !important;
+	border: 2.5px solid #262727 !important;
+	color: #f5c562 !important;
+	outline-width: 0 !important;
+}
+
 .alert-success {
 	background-color: #249D3D;
 	color: #FFFFFF;

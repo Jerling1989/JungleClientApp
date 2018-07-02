@@ -1,0 +1,48 @@
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#top-nav {
+	z-index: 10;
+	background-color: #FFFFFF;
+	border-bottom: 5px #F5C562 solid;
+}
+
+#nav-pic {
+	height: 60px;
+	margin: -6px 0px -6px 0px;
+}
+
+.nav-link {
+	color: #262727 !important;
+	margin-top: 5px;
+}
+
+#search_text_input {
+	border: 2.5px #F5C562 solid;
+	border-radius: 20px;
+	background-color: #F7F8F9;
+	width: 180px;
+}
+
+#search_text_input:focus {
+	border: 2.5px #F5C562 solid;
+}
+
+#user-search-btn {
+	background: url(../img/icons/search.png);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	padding: 0px 15px 7px 15px;
+	position: relative;
+	right: 50px;
+	border: none;
+}
+
+#user-search-form {
+	position: relative;
+	left: 38px;
+}
+
+.mobile-nav {
+	display: none;
+}
