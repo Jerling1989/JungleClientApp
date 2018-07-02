@@ -94,7 +94,7 @@
 
 					<!-- SIGN OUT -->
 		      <li class="nav-item">
-		        <a class="nav-link" href="includes/handlers/logout.php"" data-toggle="tooltip" data-placement="bottom" title="Logout">
+		        <a class="nav-link" href="includes/handlers/logout.php" data-toggle="tooltip" data-placement="bottom" title="Logout">
 		        	<i class="fas fa-sign-out-alt fa-2x"></i> <span class="mobile-nav">Logout</span>
 		        </a>
 		      </li>

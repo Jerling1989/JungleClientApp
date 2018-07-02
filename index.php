@@ -48,6 +48,31 @@
 	  </tbody>
 	</table>
 
+	<?php 
+
+		$str = '';
+		$data_query = mysqli_query($connection, "SELECT * FROM clients WHERE client_closed='no' ORDER BY id ASC");
+
+		if (mysqli_num_rows($data_query) > 0) {
+			// LOOP THROUGH QUERY RESULTS ARRAY
+			while ($row = mysqli_fetch_array($data_query)) {
+				// CREATE POST VARIABLES
+				$id = $row['id'];
+				$first_name = $row['first_name'];
+				$last_name = $row['last_name'];
+				$company = $row['company_name'];
+
+				$str = "<div><p>$id $first_name $last_name $company</p></div>";
+				echo $str;
+			}
+			
+		}
+		
+
+	?>
+
+	
+
 
 
 </div>

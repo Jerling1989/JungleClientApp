@@ -24,8 +24,6 @@
 
 		// ASSIGNING COMPANY FORM VALUE TO $COMPANY VARIABLE
 		$company = strip_tags($_POST['company']); // REMOVE HTML TAGS
-		$company = str_replace(' ', '', $company); // REMOVE SPACES
-		$company = ucfirst(strtolower($company)); // CAPITALIZE FIRST LETTER ONLY
 		$_SESSION['company'] = $company; // STORES LAST NAME INTO SESSION VARIABLE
 
 		// GENERATE USERNAME BY CONCATENATING FIRST AND LAST NAME
