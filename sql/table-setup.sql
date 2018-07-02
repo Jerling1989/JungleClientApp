@@ -15,6 +15,7 @@ CREATE TABLE clients (
 	id INT AUTO_INCREMENT NOT NULL,
 	first_name VARCHAR (25),
 	last_name VARCHAR (25),
+	username VARCHAR (60),
 	company_name VARCHAR (60),
 	email VARCHAR (60),
 	phone_number VARCHAR (25),
@@ -33,3 +34,16 @@ CREATE TABLE clients (
 	services_array TEXT,
 	PRIMARY KEY (id)
 ); 
+
+CREATE TABLE tasks (
+	id INT AUTO_INCREMENT NOT NULL,
+	task_name VARCHAR(60),
+	client_for VARCHAR(60),
+	created_at DATETIME,
+	created_by VARCHAR(60),
+	pending_at DATETIME,
+	pending_by VARCHAR(60),
+	completed_at DATETIME,
+	completed_by VARCHAR(60),
+	PRIMARY KEY (id)
+);
