@@ -1,15 +1,7 @@
 <?php
-
-	require 'config/config.php';
-
+	include('includes/header.php');
+	session_destroy();
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Welcome to the Jungle!</title>
-</head>
-<body>
-	Welcome to the Jungle!
+	Welcome to the Jungle <?php echo $user['first_name'] . ' ' . $user['last_name']; ?>!
 </body>
 </html>
