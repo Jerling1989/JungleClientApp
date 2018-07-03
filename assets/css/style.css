@@ -150,6 +150,7 @@ tr:hover a {
 	background-color: #262727;
 }
 
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TASK MANAGER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .add_new_task {
 	background-color: #262727;
@@ -159,6 +160,88 @@ tr:hover a {
 
 .task-cards {
 	margin-bottom: 10px;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ UPLOAD PIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#upload-pic-panel {
+	background-color: #262727;
+	padding: 25px;
+	border-radius: 10px;
+	color: #FFFFFF;
+}
+
+#upload-pic-panel h2 {
+	text-decoration: underline;
+	color: #F5C562;
+}
+
+#upload-pic-panel input, #upload-pic-panel label {
+	margin-left: 10px;
+}
+
+#uploadImageTwo {
+	width: 180px;
+	height: 38px;
+	background-color: #FFB90D;
+	border-radius: 4px;
+	color: #F7F8F9;
+	font-weight: normal;
+	padding-top: 0.5px;
+}
+
+#uploadImageTwo:hover {
+	background-color: #D69B0A;
+}
+
+#uploadImageTwo img {
+	width: 30px;
+	height: 30px;
+	display: inline;
+	margin: 4px auto;
+	padding-bottom: 1.5px;
+}
+
+/* CROPPING AREA */
+#CroppingContainer {
+	width: 100%;
+	height: auto;
+	background-color: #F7F8F9;
+	position: relative;
+	overflow: hidden;
+	border: 2px #666 solid;
+	z-index: 2001;
+	padding-bottom: 0px;
+}
+
+#CroppingArea {
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+	margin: 40px 25% 40px 25%;
+	border: none;
+}
+
+#CroppingArea img {
+	width: 50%;
+	height: auto;
+	border:0px #990000 solid;
+	position: relative;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+
+#CropImageForm{
+	width: 100%;
+	height: auto;
+	margin: 0px auto 10px auto;
+}
+
+#CropImageForm2 {
+	width: 100%;
+	height: auto;
+	margin: 10px auto 30px auto;
 }
 
 
@@ -172,6 +255,7 @@ tr:hover a {
 
 .settings-panel h4 {
 	text-decoration: underline;
+	color: #F5C562;
 }
 
 
