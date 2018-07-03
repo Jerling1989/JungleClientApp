@@ -22,22 +22,6 @@ $(document).ready(function() {
 		document.search_form.submit();
 	});
 
-	// WHEN POST BUTTON IS CLICKED ON PROFILE ADD CLIENT MODAL
-	$('#submit_new_client').click(function() {
-		// AJAX REQUEST FOR SENDING POST
-		$.ajax({
-			type: 'POST',
-			url: 'includes/handlers/ajax_submit_new_client.php',
-			data: $('form.add_new_client').serialize(),
-			success: function(msg) {
-				$('add_new_client').modal('hide');
-				location.reload();
-			},
-			error: function() {
-				alert('Failure');
-			}
-		});
-	});
 
 });
 
