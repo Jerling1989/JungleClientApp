@@ -161,7 +161,7 @@
 
 				  <div class="row">
 				  	<div class="col-12">
-				  		<input type="submit" class="btn btn-success btn-block" name="edit_client" value="Submit" />
+				  		<input type="submit" class="btn btn-outline-light btn-block" name="edit_client" value="Submit" />
 				  	</div>
 			    </div>
 
@@ -178,11 +178,11 @@
 	<div class="add_new_task">
 		<form action="" method="POST">
 			<div class="row">
-				<div class="col-10">
+				<div class="col-9 col-md-10">
 					<input type="text" class="form-control" name="task_name" placeholder="Add New Task" required />
 				</div>
-				<div class="col-2">
-					<input type="submit" class="btn btn-success btn-block" name="add_task" value="Submit" />
+				<div class="col-3 col-md-2">
+					<input type="submit" class="btn btn-outline-light btn-block" name="add_task" value="Add" />
 				</div>
 			</div>
 		</form>

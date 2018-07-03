@@ -44,7 +44,6 @@
 		$pending_by = $userLoggedIn;
 		// ASSIGNING TASK PENDING DATE (EX. 2018-10-31)
 		$pending_at = date('Y-m-d H:i:s');
-
 		// RUN QUERY TO UPDATE TASK TO DATABASE
 		$query = mysqli_query($connection, "UPDATE tasks SET pending_at='$pending_at', pending_by='$pending_by' WHERE task_name='$task_name' AND client_for='$client_for'");
 	}
@@ -60,9 +59,19 @@
 		$completed_by = $userLoggedIn;
 		// ASSIGNING TASK PENDING DATE (EX. 2018-10-31)
 		$completed_at = date('Y-m-d H:i:s');
-
 		// RUN QUERY TO UPDATE TASK TO DATABASE
 		$query = mysqli_query($connection, "UPDATE tasks SET completed_at='$completed_at', completed_by='$completed_by' WHERE task_name='$task_name' AND client_for='$client_for'");
+	}
+
+
+	// IF REMOVE TASK BUTTON IS PUSHED
+	if(isset($_POST['remove_task'])) {
+		// ASSIGNING TASK_NAME FORM VALUE TO $TASK_NAME VARIABLE
+		$task_name = $_POST['task_name'];
+		// ASSIGNING CLIENT PROFILE OWNER TO $CREATED_FOR VARIABLE
+		$client_for = $username;
+		// RUN QUERY TO UPDATE TASK TO DATABASE
+		$query = mysqli_query($connection, "DELETE FROM tasks WHERE task_name='$task_name' AND client_for='$client_for'");
 	}
 
 
