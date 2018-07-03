@@ -73,7 +73,7 @@
 	<!-- MODAL BUTTON TRIGGER -->
 	<span data-toggle="modal" data-target="#client-modal">
 	<button type="submit" class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="Post to Profile">
-		<i class="fas fa-edit fa-2x"></i>
+		Add New Client
 	</button>
 	</span>
 
@@ -116,7 +116,7 @@
 	      	<!-- CANCEL POST -->
 	        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 	        <!-- SEND POST -->
-	        <button type="button" class="btn btn-success" name="post_button" id="submit_profile_post">Submit</button>
+	        <button type="button" class="btn btn-success" name="add_client" id="submit_new_client">Submit</button>
 	      </div>
 	      <!-- END MODAL FOOTER -->
 	    </div>
