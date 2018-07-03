@@ -62,7 +62,7 @@
 		$completed_at = date('Y-m-d H:i:s');
 
 		// RUN QUERY TO UPDATE TASK TO DATABASE
-		$query = mysqli_query($connection, "UPDATE tasks SET pending_at='$pending_at', pending_by='$pending_by' WHERE task_name='$task_name' AND client_for='$client_for'");
+		$query = mysqli_query($connection, "UPDATE tasks SET completed_at='$completed_at', completed_by='$completed_by' WHERE task_name='$task_name' AND client_for='$client_for'");
 	}
 
 
