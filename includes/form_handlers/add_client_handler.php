@@ -51,4 +51,13 @@
 
 	}
 
+
+	// IF DELETE CLIENT BUTTON IS PUSHED
+	if(isset($_POST['delete_client'])) {
+		// ASSIGNING CLIENT USERNAME FORM VALUE TO $USERNAME VARIABLE
+		$username = $_POST['username'];
+		// RUN QUERY TO UPDATE TASK TO DATABASE
+		$query = mysqli_query($connection, "DELETE FROM clients WHERE username='$username'");
+	}
+
 ?>

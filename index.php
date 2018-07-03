@@ -73,7 +73,7 @@
 											<td><a href='$username'>$company</a></td>
 											<td>
 												<form action='' method='POST'>
-													<input type='submit' class='delete_client btn btn-outline-danger btn-sm' name='delet_client' value='X' />
+													<input type='submit' class='delete_client btn btn-outline-danger btn-sm' name='delete_client' value='X' />
 													<input type='hidden' name='username' value='$username' />
 												</form>
 											</td>
