@@ -21,33 +21,38 @@
 	<!-- CLIENT INFO PANEL -->
 	<div class="client-info col-md-12">
 		<div class="row">
+			<!-- LEFT SIDE INFO -->
 			<div class="col-md-4">
 				<img src="<?php echo $client['profile_pic'] ?>">
 				<h5>ID: <?php echo $client['id']; ?></h5>
 				<h5>Name: <?php echo $client['first_name'] . ' ' . $client['last_name']; ?></h5>
 				<h5>Company: <?php echo $client['company_name']; ?></h5>
-
+				<!-- FACEBOOK -->
 				<a href="<?php echo $client['facebook']; ?>">
 					<i class="fab fa-facebook fa-lg"></i>
 				</a>
+				<!-- TWITTER -->
 				<a href="<?php echo $client['twitter']; ?>">
 					<i class="fab fa-twitter-square fa-lg"></i>
 				</a>
+				<!-- INSTAGRAM -->
 				<a href="<?php echo $client['instagram']; ?>">
 					<i class="fab fa-instagram fa-lg"></i>
 				</a>
+				<!-- LINKEDIN -->
 				<a href="<?php echo $client['linkedin']; ?>">
 					<i class="fab fa-linkedin fa-lg"></i>
 				</a>
+				<!-- YOUTUBE -->
 				<a href="<?php echo $client['youtube']; ?>">
 					<i class="fab fa-youtube-square fa-lg"></i>
 				</a>
+				<!-- PINTEREST -->
 				<a href="<?php echo $client['pinterest']; ?>">
 					<i class="fab fa-pinterest-p fa-lg"></i>
 				</a>
-				
 			</div>
-
+			<!-- RIGHT SIDE INFO -->
 			<div class="col-md-8">
 				<h5>Website: <a target="_blank" href="http://<?php echo $client['website']; ?>"><?php echo $client['website']; ?></a></h5>
 				<h5>Email: <?php echo $client['email']; ?></h5>
@@ -60,105 +65,106 @@
 		</div>
 
 		<br />
-
+		<!-- BUTTON TO TOGGLE CLIENT INFO FORM DIV -->
 		<button type="button" class="btn btn-outline-light btn-sm" data-toggle="collapse" data-target="#edit_client" aria-expanded="false" aria-controls="edit_client">Edit</button>
 		
 		<!-- COLLAPSIBLE FORM DIV -->
 		<div class="collapse" id="edit_client">
 		  <div class="card card-body">
 		    <form class="" action="" method="POST">
-
+					<!-- FIRST NAME -->
 				  <div class="row">
 				    <div class="col-6 col-md-3 form-group">
 				    	<label for="first_name">First Name</label>
 				      <input type="text" class="form-control" name="first_name" placeholder="First Name" value="<?php echo $client['first_name']; ?>" />
 				    </div>
-				    
+				    <!-- LAST NAME -->
 				    <div class="col-6 col-md-3 form-group">
 				    	<label for="last_name">Last Name</label>
 				      <input type="text" class="form-control" name="last_name" placeholder="Last Name" value="<?php echo $client['last_name']; ?>" />
 				    </div>
-				    
+				    <!-- COMPANY -->
 				    <div class="col-6 col-md-3 form-group">
 				    	<label for="company">Company</label>
 				      <input type="text" class="form-control" name="company" placeholder="Company"  value="<?php echo $client['company_name']; ?>" />
 				    </div>
-				    
+				    <!-- WEBSITE -->
 				    <div class="col-6 col-md-3 form-group">
 				    	<label for="website">Website</label>
 				      <input type="text" class="form-control" name="website" placeholder="www.example.com" value="<?php echo $client['website']; ?>" />
 				    </div>
 				  </div>
-
+					<!-- STREET -->
 				  <div class="row">
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="street">Street</label>
 				      <input type="text" class="form-control" name="street" placeholder="42 Wallaby Way" value="<?php echo $client['street_address']; ?>" />
 				    </div>
-				    
+				    <!-- CITY -->
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="city">City</label>
 				      <input type="text" class="form-control" name="city" placeholder="Dallas" value="<?php echo $client['city']; ?>" />
 				    </div>
-				    
+				    <!-- STATE -->
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="state">State</label>
 				      <input type="text" class="form-control" name="state" placeholder="Texas" value="<?php echo $client['state']; ?>" />
 				    </div>
 				  </div>
-
+					<!-- EMAIL -->
 				  <div class="row">
 				    <div class="col-6 col-md-4 form-group">
 				    	<label for="email">Email</label>
 				      <input type="email" class="form-control" name="email" placeholder="contact@example.com" value="<?php echo $client['email']; ?>" />
 				    </div>
-				    
+				    <!-- PHONE -->
 				    <div class="col-6 col-md-4 form-group">
 				    	<label for="phone">Phone</label>
 				      <input type="text" class="form-control" name="phone" placeholder="(855) 555-1246" value="<?php echo $client['phone_number']; ?>" />
 				    </div>
-				    
+				    <!-- SERVICES -->
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="services">Services</label>
 				      <input type="text" class="form-control" name="services" placeholder="Ex. Google Adwords, SEO, Facebook..." value="<?php echo $client['services']; ?>" />
 				    </div>				    
 				  </div>
 
-
+					
 				  <div class="row">
+				  	<!-- FACEBOOK -->
 				  	<div class="col-6 col-md-2 form-group">
 				  		<label for="facebook">Facebook</label>
 				      <input type="text" class="form-control" name="facebook" placeholder="https://www.facebook.com/example" value="<?php echo $client['facebook']; ?>" />
 				    </div>
-				    
+				    <!-- TWITTER -->
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="twitter">Twitter</label>
 				      <input type="text" class="form-control" name="twitter" placeholder="https://twitter.com/example" value="<?php echo $client['twitter']; ?>" />
 				    </div>
-				    
+				    <!-- INSTAGRAM -->
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="instagram">Instagram</label>
 				      <input type="text" class="form-control" name="instagram" placeholder="https://instagram.com/example" value="<?php echo $client['instagram']; ?>" />
 				    </div>
-				    
+				    <!-- LINKEDIN -->
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="linkedin">LinkedIn</label>
 				      <input type="text" class="form-control" name="linkedin" placeholder="https://linkedin.com/in/example" value="<?php echo $client['linkedin']; ?>" />
 				    </div>
-				    
+				    <!-- YOUTUBE -->
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="youtube">YouTube</label>
 				      <input type="text" class="form-control" name="youtube" placeholder="https://youtube.com/example" value="<?php echo $client['youtube']; ?>" />
 				    </div>
-				    
+				    <!-- PINTEREST -->
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="pinterest">Pinterest</label>
 				      <input type="text" class="form-control" name="pinterest" placeholder="https://pinterest.com/example" value="<?php echo $client['pinterest']; ?>" />
 				    </div>
 				  </div>
-
 					<br />
-
+					
+					<!-- FORM SUBMIT BUTTON -->
 				  <div class="row">
 				  	<div class="col-12">
 				  		<input type="submit" class="btn btn-outline-light btn-block" name="edit_client" value="Submit" />
@@ -166,6 +172,7 @@
 			    </div>
 
 				</form>
+				<!-- END FORM -->
 		  </div>
 		</div>
 		<!-- COLLAPSIBLE FORM DIV -->
@@ -174,8 +181,9 @@
 
 	<br />
 	
-	<!-- NEW TASK FORM -->
+	<!-- TASK MANAGER DIV -->
 	<div class="add_new_task">
+		<!-- NEW TASK FORM -->
 		<form action="" method="POST">
 			<div class="row">
 				<div class="col-9 col-md-10">
@@ -186,12 +194,14 @@
 				</div>
 			</div>
 		</form>
-
+		<!-- END NEW TASK FORM -->
 		<br />
 
+		<!-- TASK DATA DIV -->
 		<div class="row">
 			<?php
 	  		$str = '';
+	  		// DATABAD QUERY
 				$data_query = mysqli_query($connection, "SELECT * FROM tasks WHERE client_for='$username' ORDER BY id DESC");
 
 				if (mysqli_num_rows($data_query) > 0) {
@@ -206,6 +216,7 @@
 						$completed_by = $row['completed_by'];
 						$completed_at = $row['completed_at'];
 
+						// IF TASK IS MARKED AS COMPLETED
 						if($completed_by != '') {
 							$str = "<div class='card text-white bg-success col-md-3 task-cards'>
 											  <div class='card-body'>
@@ -218,6 +229,7 @@
 											  </div>
 											</div>";
 
+							// IF TASK IS MARKED AS PENDING
 						} else if($pending_by != '') {
 							$str = "<div class='card text-white bg-warning col-md-3 task-cards'>
 											  <div class='card-body'>
@@ -230,6 +242,7 @@
 											  </div>
 											</div>";
 
+							// IF TASK IS MARKED AS CREATED
 						} else {
 							$str = "<div class='card text-white bg-danger col-md-3 task-cards'>
 											  <div class='card-body'>
@@ -242,16 +255,14 @@
 											  </div>
 											</div>";
 						}
-						
+						// RETURN TASK CARD
 						echo $str;
-
 					}
 				}
 	  	?>
 		</div>
 	</div>
-	<!-- END NEW TASK FORM -->
-
+	<!-- END TASK MANAGER DIV -->
 
 	<br /><br />
 
@@ -484,9 +495,6 @@
 <?php } ?>
  
 <br /><br />
-	
-
-
 
 </div>
 <!-- END WRAPPER DIV -->
