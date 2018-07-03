@@ -162,6 +162,17 @@ tr:hover a {
 }
 
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SETTINGS PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.settings-panel {
+	background-color: #262727;
+	border-radius: 10px;
+	padding: 10px 20px 10px 20px;
+	color: #FFFFFF;
+}
+
+.settings-panel h4 {
+	text-decoration: underline;
+}
 
 
 /*~~~~~~~~~~~~~ MOBILE TABLET SCREEN ~~~~~~~~~~~~~~*/
