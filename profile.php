@@ -207,16 +207,38 @@
 						$completed_at = $row['completed_at'];
 
 						if($completed_by != '') {
-							$str = "<p>$task_name</p>
-										<p>Completed by $completed_by at $completed_at</p>";
+							$str = "<div class='card text-white bg-success col-md-3 task-cards'>
+											  <div class='card-body'>
+											    <h5 class='card-title'>$task_name</h5>
+											    <p class='card-text'>Completed by $completed_by at $completed_at</p>
+											    <form action='' method='POST'>
+														<input type='submit' class='btn btn-danger btn-block' name='remove_task' value='Remove' />
+														<input type='hidden' name='task_name' value='$task_name' />
+													</form>
+											  </div>
+											</div>";
+
 						} else if($pending_by != '') {
-							$str = "<p>$task_name</p>
-										<p>Marked Pending by $pending_by at $pending_by</p>";
+							$str = "<div class='card text-white bg-warning col-md-3 task-cards'>
+											  <div class='card-body'>
+											    <h5 class='card-title'>$task_name</h5>
+											    <p class='card-text'>Pending by $pending_by at $pending_at</p>
+											    <form action='' method='POST'>
+														<input type='submit' class='btn btn-success btn-block' name='mark_complete' value='Complete' />
+														<input type='hidden' name='task_name' value='$task_name' />
+													</form>
+											  </div>
+											</div>";
+
 						} else {
 							$str = "<div class='card text-white bg-danger col-md-3 task-cards'>
 											  <div class='card-body'>
 											    <h5 class='card-title'>$task_name</h5>
 											    <p class='card-text'>Created by $created_by at $created_at</p>
+											    <form action='' method='POST'>
+														<input type='submit' class='btn btn-warning btn-block' name='mark_pending' value='Pending' />
+														<input type='hidden' name='task_name' value='$task_name' />
+													</form>
 											  </div>
 											</div>";
 						}

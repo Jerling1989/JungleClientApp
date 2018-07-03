@@ -19,24 +19,51 @@
 	$created_at = ''; // CREATED AT
 	
 
-	// IF ADD CLIENT BUTTON IS PRESSED
+	// IF ADD SUBMIT TASK BUTTON IS PRESSED
 	if(isset($_POST['add_task'])) {
-
-		// ASSIGNING FIRST_NAME FORM VALUE TO $FIRST_NAME VARIABLE
+		// ASSIGNING TASK_NAME FORM VALUE TO $TASK_NAME VARIABLE
 		$task_name = strip_tags($_POST['task_name']); // REMOVE HTML TAGS
-
 		// ASSIGNING CLIENT PROFILE OWNER TO $CREATED_FOR VARIABLE
 		$client_for = $username;
-
 		// ASSIGNING CURRENT USER TO $CREATED_BY VARIABLE
 		$created_by = $userLoggedIn;
-
-		// ASSIGNING CLIENT CREATION DATE (EX. 2018-10-31)
+		// ASSIGNING TASK CREATION DATE (EX. 2018-10-31)
 		$created_at = date('Y-m-d H:i:s');
-
-		// RUN QUERY TO ADD CLIENT TO DATABASE
+		// RUN QUERY TO ADD TASK TO DATABASE
 		$query = mysqli_query($connection, "INSERT INTO tasks VALUES ('', '$task_name', '$client_for', '$created_at', '$created_by', '', '', '', '')");
-
 	}
+
+
+	// IF MARK PENDING BUTTON IS PUSHED
+	if(isset($_POST['mark_pending'])) {
+		// ASSIGNING TASK_NAME FORM VALUE TO $TASK_NAME VARIABLE
+		$task_name = $_POST['task_name'];
+		// ASSIGNING CLIENT PROFILE OWNER TO $CREATED_FOR VARIABLE
+		$client_for = $username;
+		// ASSIGNING CURRENT USER TO $PENDING_BY VARIABLE
+		$pending_by = $userLoggedIn;
+		// ASSIGNING TASK PENDING DATE (EX. 2018-10-31)
+		$pending_at = date('Y-m-d H:i:s');
+
+		// RUN QUERY TO UPDATE TASK TO DATABASE
+		$query = mysqli_query($connection, "UPDATE tasks SET pending_at='$pending_at', pending_by='$pending_by' WHERE task_name='$task_name' AND client_for='$client_for'");
+	}
+
+
+	// IF MARK COMPLETE BUTTON IS PUSHED
+	if(isset($_POST['mark_complete'])) {
+		// ASSIGNING TASK_NAME FORM VALUE TO $TASK_NAME VARIABLE
+		$task_name = $_POST['task_name'];
+		// ASSIGNING CLIENT PROFILE OWNER TO $CREATED_FOR VARIABLE
+		$client_for = $username;
+		// ASSIGNING CURRENT USER TO $PENDING_BY VARIABLE
+		$completed_by = $userLoggedIn;
+		// ASSIGNING TASK PENDING DATE (EX. 2018-10-31)
+		$completed_at = date('Y-m-d H:i:s');
+
+		// RUN QUERY TO UPDATE TASK TO DATABASE
+		$query = mysqli_query($connection, "UPDATE tasks SET pending_at='$pending_at', pending_by='$pending_by' WHERE task_name='$task_name' AND client_for='$client_for'");
+	}
+
 
 ?>
