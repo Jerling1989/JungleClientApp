@@ -87,6 +87,9 @@ tr:hover a {
 	color: #262727;
 }
 
+.delete_client {
+	position: absolute;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ADD CLIENT FORM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #add-client-div {
@@ -172,6 +175,10 @@ tr:hover a {
 		left: 0px;
 	}
 
+	.delete_client {
+		margin-left: -20px;
+	}
+
 }
 
 
@@ -187,6 +194,10 @@ tr:hover a {
 		left: 0px;
 	}
 
+	.delete_client {
+		margin-left: -20px;
+	}
+
 }
 
 
@@ -199,6 +210,10 @@ tr:hover a {
 
 	#user-search-form {
 		left: 0px;
+	}
+
+	.delete_client {
+		margin-left: -20px;
 	}
 
 }

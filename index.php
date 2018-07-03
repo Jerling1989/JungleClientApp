@@ -32,7 +32,7 @@
 				    </div>
 				    <br /><br />
 				    <div class="col-12 col-md-3">
-				      <input type="submit" class="btn btn-success btn-block" name="add_client" value="Submit" />
+				      <input type="submit" class="btn btn-outline-light btn-block" name="add_client" value="Submit" />
 				    </div>
 				  </div>
 				</form>
@@ -71,6 +71,12 @@
 											<td><a href='$username'>$first_name</a></td>
 											<td><a href='$username'>$last_name</a></td>
 											<td><a href='$username'>$company</a></td>
+											<td>
+												<form action='' method='POST'>
+													<input type='submit' class='delete_client btn btn-outline-danger btn-sm' name='delet_client' value='X' />
+													<input type='hidden' name='username' value='$username' />
+												</form>
+											</td>
 										</tr>";
 						echo $str;
 					}
