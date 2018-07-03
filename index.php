@@ -26,9 +26,10 @@
 	      <th scope="col"><strong>Company</strong></th>
 	    </tr>
 	  </thead>
+	  
 	  <tbody>
-	    <?php 
-				$str = '';
+	  	<?php
+	  		$str = '';
 				$data_query = mysqli_query($connection, "SELECT * FROM clients WHERE client_closed='no' ORDER BY id ASC");
 
 				if (mysqli_num_rows($data_query) > 0) {
@@ -51,15 +52,10 @@
 						echo $str;
 					}
 				}
-			?>
+	  	?>
 	  </tbody>
+
 	</table>
-
-	
-
-	
-
-
 
 </div>
 <!-- END WRAPPER DIV -->

@@ -43,8 +43,11 @@
 		// ASSIGNING CLIENT CREATION DATE (EX. 2018-10-31)
 		$date = date('Y-m-d');
 
+		// DEFAULT PROFILE PICTURE PATH
+		$profile_pic = 'assets/img/profile_pics/defaults/avatar.png';
+
 		// RUN QUERY TO ADD CLIENT TO DATABASE
-		$query = mysqli_query($connection, "INSERT INTO clients VALUES ('', '$first_name', '$last_name', '$username', '$company', '', '', '', '', '', '', '', '', '', '', '', '', '$date', 'no', ',')");
+		$query = mysqli_query($connection, "INSERT INTO clients VALUES ('', '$first_name', '$last_name', '$username', '$company', '', '', '$profile_pic', '', '', '', '', '', '', '', '', '', '$date', 'no', ',')");
 
 	}
 

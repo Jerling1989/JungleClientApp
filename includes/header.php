@@ -3,7 +3,7 @@
 	// INCLUDE NECCESSARY FILES AND SCRIPTS
 	require 'config/config.php';
 	include('includes/classes/User.php');
-	// include('includes/classes/Client.php');
+	include('includes/classes/Client.php');
 	include('includes/classes/Task.php');
 
 	// CHECK IF USER IS SIGNED IN
