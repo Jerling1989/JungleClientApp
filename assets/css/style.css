@@ -62,6 +62,11 @@ table a {
 	color: white;
 }
 
+table button {
+	position: absolute;
+	right: 10px;
+}
+
 th {
 	color: #F5C562;
 }
@@ -82,6 +87,12 @@ tr:hover a {
 	color: #262727;
 }
 
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ADD CLIENT FORM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#add-client-div {
+	background-color: #262727;
+	padding: 10px;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLIENT INFO PANEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .client-info {
