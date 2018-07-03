@@ -3,8 +3,7 @@
 	// INCLUDE NECCESSARY FILES AND SCRIPTS
 	require 'config/config.php';
 	include('includes/classes/User.php');
-	include('includes/classes/Client.php');
-	include('includes/classes/Task.php');
+
 
 	// CHECK IF USER IS SIGNED IN
 	if(isset($_SESSION['username'])) {
@@ -15,8 +14,6 @@
 		$user_details_query = mysqli_query($connection, "SELECT * FROM users WHERE username='$userLoggedIn'");
 		// STORE USER DETAILS INTO ARRAY
 		$user = mysqli_fetch_array($user_details_query);
-		// GET NUMBER OF USER CLIENTS
-		$user_clients = (substr_count($user['client_array'], ',')) - 1;
 
 		// IF NOT SIGNED IN REDIRECT USER TO LOGIN PAGE
 	} else {
