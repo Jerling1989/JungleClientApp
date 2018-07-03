@@ -149,10 +149,14 @@ tr:hover a {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TASK MANAGER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .add_new_task {
-	padding: 10px;
+	background-color: #262727;
+	padding: 25px;
+	border-radius: 10px;
 }
 
-
+.task-cards {
+	margin: 0px;
+}
 
 
 

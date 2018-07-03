@@ -2,6 +2,7 @@
 	// INCLUDE NECCESSARY FILES AND SCRIPTS
 	include('includes/header.php');
 	include('includes/form_handlers/edit_client_handler.php');
+	include('includes/form_handlers/add_task_handler.php');
 
 	// CHECK IF USERNAME IS SET FOR URL
 	if(isset($_GET['profile_username'])) {
@@ -174,17 +175,64 @@
 	<br />
 	
 	<!-- NEW TASK FORM -->
-	<div class="add_new_task row">
+	<div class="add_new_task">
 		<form action="" method="POST">
-			<div class="col-10">
-				<input type="text" class="form-control" name="new_task" placeholder="Add a New Task" required />
-			</div>
-			<div class="col-2">
-				<input type="submit" class="btn btn-success btn-block" name="add_task" value="Submit" />
+			<div class="row">
+				<div class="col-10">
+					<input type="text" class="form-control" name="task_name" placeholder="Add New Task" required />
+				</div>
+				<div class="col-2">
+					<input type="submit" class="btn btn-success btn-block" name="add_task" value="Submit" />
+				</div>
 			</div>
 		</form>
+
+		<br />
+
+		<div class="row">
+			<?php
+	  		$str = '';
+				$data_query = mysqli_query($connection, "SELECT * FROM tasks WHERE client_for='$username' ORDER BY id DESC");
+
+				if (mysqli_num_rows($data_query) > 0) {
+					// LOOP THROUGH QUERY RESULTS ARRAY
+					while ($row = mysqli_fetch_array($data_query)) {
+						// CREATE POST VARIABLES
+						$task_name = $row['task_name'];
+						$created_by = $row['created_by'];
+						$created_at = $row['created_at'];
+						$pending_by = $row['pending_by'];
+						$pending_at = $row['pending_at'];
+						$completed_by = $row['completed_by'];
+						$completed_at = $row['completed_at'];
+
+						if($completed_by != '') {
+							$str = "<p>$task_name</p>
+										<p>Completed by $completed_by at $completed_at</p>";
+						} else if($pending_by != '') {
+							$str = "<p>$task_name</p>
+										<p>Marked Pending by $pending_by at $pending_by</p>";
+						} else {
+							$str = "<div class='card text-white bg-danger col-md-3 task-cards'>
+											  <div class='card-body'>
+											    <h5 class='card-title'>$task_name</h5>
+											    <p class='card-text'>Created by $created_by at $created_at</p>
+											  </div>
+											</div>";
+						}
+						
+						echo $str;
+
+					}
+				}
+	  	?>
+		</div>
+
 	</div>
 	<!-- END NEW TASK FORM -->
+
+
+	
 
 
 
