@@ -87,21 +87,21 @@
 		    	<!-- HOME PAGE -->
 		    	<li class="nav-item">
 		        <a class="nav-link" href="index.php" data-toggle="tooltip" data-placement="bottom" title="Home">
-		        	<i class="fas fa-home fa-2x"></i> <span class="mobile-nav">Home</span>
+		        	<i class="fas fa-home fa-2x"></i> <span class="mobile-nav"><strong>Home</strong></span>
 		        </a>
 		      </li>
 
 		    	<!-- SETTINGS -->
 		      <li class="nav-item">
 		        <a class="nav-link" href="settings.php" data-toggle="tooltip" data-placement="bottom" title="Settings">
-		        	<i class="fas fa-cog fa-2x"></i> <span class="mobile-nav">Settings</span>
+		        	<i class="fas fa-cog fa-2x"></i> <span class="mobile-nav"><strong>Settings</strong></span>
 		        </a>
 		      </li>
 
 					<!-- SIGN OUT -->
 		      <li class="nav-item">
 		        <a class="nav-link" href="includes/handlers/logout.php" data-toggle="tooltip" data-placement="bottom" title="Logout">
-		        	<i class="fas fa-sign-out-alt fa-2x"></i> <span class="mobile-nav">Logout</span>
+		        	<i class="fas fa-sign-out-alt fa-2x"></i> <span class="mobile-nav"><strong>Logout</strong></span>
 		        </a>
 		      </li>
 		    </ul>

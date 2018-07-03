@@ -162,6 +162,10 @@ tr:hover a {
 		display: inline-block;
 	}
 
+	#user-search-form {
+		left: 0px;
+	}
+
 }
 
 
@@ -173,6 +177,10 @@ tr:hover a {
 		display: inline-block;
 	}
 
+	#user-search-form {
+		left: 0px;
+	}
+
 }
 
 
@@ -181,6 +189,10 @@ tr:hover a {
 
 	.mobile-nav {
 		display: inline-block;
+	}
+
+	#user-search-form {
+		left: 0px;
 	}
 
 }
