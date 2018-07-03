@@ -30,17 +30,14 @@
 				      <input type="text" class="form-control" name="company" placeholder="Company" required />
 				    </div>
 				    <div class="col-12 col-md-3">
-				      <input type="submit" class="btn btn-outline-success btn-block" name="add_client" value="Submit" />
+				      <input type="submit" class="btn btn-success btn-block" name="add_client" value="Submit" />
 				    </div>
 				  </div>
 				</form>
 		  </div>
 		</div>
 
-
 	</div>
-
-	<!-- <br /> -->
 
 	<table class="table table-dark">
 	  <thead>
