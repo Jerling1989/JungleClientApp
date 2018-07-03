@@ -50,61 +50,61 @@
 
 		<div class="collapse" id="edit_client">
 		  <div class="card card-body">
-		    <form class="" action="index.php" method="POST">
+		    <form class="" action="" method="POST">
 
 				  <div class="row">
 				    <div class="col-6 col-md-3 form-group">
 				    	<label for="first_name">First Name</label>
-				      <input type="text" class="form-control" name="first_name" placeholder="First Name" required value="<?php echo $client['first_name']; ?>" />
+				      <input type="text" class="form-control" name="first_name" placeholder="First Name" value="<?php echo $client['first_name']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-3 form-group">
 				    	<label for="last_name">Last Name</label>
-				      <input type="text" class="form-control" name="last_name" placeholder="Last Name" required value="<?php echo $client['last_name']; ?>" />
+				      <input type="text" class="form-control" name="last_name" placeholder="Last Name" value="<?php echo $client['last_name']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-3 form-group">
 				    	<label for="company">Company</label>
-				      <input type="text" class="form-control" name="company" placeholder="Company" required  value="<?php echo $client['company_name']; ?>" />
+				      <input type="text" class="form-control" name="company" placeholder="Company"  value="<?php echo $client['company_name']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-3 form-group">
 				    	<label for="website">Website</label>
-				      <input type="text" class="form-control" name="website" placeholder="www.example.com" required value="<?php echo $client['website']; ?>" />
+				      <input type="text" class="form-control" name="website" placeholder="www.example.com" value="<?php echo $client['website']; ?>" />
 				    </div>
 				  </div>
 
 				  <div class="row">
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="street">Street</label>
-				      <input type="text" class="form-control" name="street" placeholder="42 Wallaby Way" required value="<?php echo $client['street_address']; ?>" />
+				      <input type="text" class="form-control" name="street" placeholder="42 Wallaby Way" value="<?php echo $client['street_address']; ?>" />
 				    </div>
 				    
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="city">City</label>
-				      <input type="text" class="form-control" name="city" placeholder="Dallas" required value="<?php echo $client['city']; ?>" />
+				      <input type="text" class="form-control" name="city" placeholder="Dallas" value="<?php echo $client['city']; ?>" />
 				    </div>
 				    
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="state">State</label>
-				      <input type="text" class="form-control" name="state" placeholder="Texas" required value="<?php echo $client['state']; ?>" />
+				      <input type="text" class="form-control" name="state" placeholder="Texas" value="<?php echo $client['state']; ?>" />
 				    </div>
 				  </div>
 
 				  <div class="row">
 				    <div class="col-6 col-md-4 form-group">
 				    	<label for="email">Email</label>
-				      <input type="email" class="form-control" name="email" placeholder="contact@example.com" required value="<?php echo $client['email']; ?>" />
+				      <input type="email" class="form-control" name="email" placeholder="contact@example.com" value="<?php echo $client['email']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-4 form-group">
 				    	<label for="phone">Phone</label>
-				      <input type="text" class="form-control" name="phone" placeholder="(855) 555-1246" required value="<?php echo $client['phone_number']; ?>" />
+				      <input type="text" class="form-control" name="phone" placeholder="(855) 555-1246" value="<?php echo $client['phone_number']; ?>" />
 				    </div>
 				    
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="services">Services</label>
-				      <input type="text" class="form-control" name="services" placeholder="Ex. Google Adwords, SEO, Facebook..." required value="<?php echo $client['services']; ?>" />
+				      <input type="text" class="form-control" name="services" placeholder="Ex. Google Adwords, SEO, Facebook..." value="<?php echo $client['services']; ?>" />
 				    </div>				    
 				  </div>
 
@@ -112,39 +112,36 @@
 				  <div class="row">
 				  	<div class="col-6 col-md-2 form-group">
 				  		<label for="facebook">Facebook</label>
-				      <input type="text" class="form-control" name="facebook" placeholder="https://www.facebook.com/example" required value="<?php echo $client['facebook']; ?>" />
+				      <input type="text" class="form-control" name="facebook" placeholder="https://www.facebook.com/example" value="<?php echo $client['facebook']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="twitter">Twitter</label>
-				      <input type="text" class="form-control" name="twitter" placeholder="https://twitter.com/example" required value="<?php echo $client['twitter']; ?>" />
+				      <input type="text" class="form-control" name="twitter" placeholder="https://twitter.com/example" value="<?php echo $client['twitter']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="instagram">Instagram</label>
-				      <input type="text" class="form-control" name="instagram" placeholder="https://instagram.com/example" required value="<?php echo $client['instagram']; ?>" />
+				      <input type="text" class="form-control" name="instagram" placeholder="https://instagram.com/example" value="<?php echo $client['instagram']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="linkedin">LinkedIn</label>
-				      <input type="text" class="form-control" name="linkedin" placeholder="https://linkedin.com/in/example" required value="<?php echo $client['linkedin']; ?>" />
+				      <input type="text" class="form-control" name="linkedin" placeholder="https://linkedin.com/in/example" value="<?php echo $client['linkedin']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="youtube">YouTube</label>
-				      <input type="text" class="form-control" name="youtube" placeholder="https://youtube.com/example" required value="<?php echo $client['youtube']; ?>" />
+				      <input type="text" class="form-control" name="youtube" placeholder="https://youtube.com/example" value="<?php echo $client['youtube']; ?>" />
 				    </div>
 				    
 				    <div class="col-6 col-md-2 form-group">
 				    	<label for="pinterest">Pinterest</label>
-				      <input type="text" class="form-control" name="pinterest" placeholder="https://pinterest.com/example" required value="<?php echo $client['pinterest']; ?>" />
+				      <input type="text" class="form-control" name="pinterest" placeholder="https://pinterest.com/example" value="<?php echo $client['pinterest']; ?>" />
 				    </div>
 				  </div>
 
-					<input type="hidden" name="id" value="<?php echo $client['id']; ?>" />
-				  <input type="hidden" name="profile_pic" value="<?php echo $client['profile_pic']; ?>" />
-        	<input type="hidden" name="date_added" value="<?php echo  $client['date_added']; ?>" />
-        	<input type="hidden" name="client_closed" value="<?php echo $$client['client_closed']; ?>" />
+					
         	
 
 					<br />

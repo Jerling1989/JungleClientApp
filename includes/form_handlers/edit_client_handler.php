@@ -1,9 +1,13 @@
 <?php
 
-	// IF ADD CLIENT BUTTON IS PRESSED
-	if(isset($_POST['add_client'])) {
+	// CHECK IF USERNAME IS SET FOR URL
+	if(isset($_GET['profile_username'])) {
+		// USERNAME VARIABLE
+		$username = $_GET['profile_username'];
+	}
 
-		$id = $_POST['id']
+	// IF ADD CLIENT BUTTON IS PRESSED
+	if(isset($_POST['edit_client'])) {
 
 		// ASSIGNING FIRST_NAME FORM VALUE TO $FIRST_NAME VARIABLE
 		$first_name = strip_tags($_POST['first_name']); // REMOVE HTML TAGS
@@ -72,8 +76,8 @@
 		$pinterest = ucfirst($pinterest); // LOWER CASE STRING
 
 
-		// RUN QUERY TO ADD CLIENT TO DATABASE
-		$query = mysqli_query($connection, "INSERT INTO clients VALUES ('', '$first_name', '$last_name', '$username', '$company', '', '', '$profile_pic', '', '', '', '', '', '', '', '', '', '', '$date', 'no', '')");
+		// RUN QUERY TO ADD UPDATED CLIENT INFO TO DATABASE
+		$query = mysqli_query($connection, "UPDATE clients SET first_name='$first_name', last_name='$last_name', company_name='$company', email='$email', phone_number='$phone', street_address='$street', city='$city', state='$state', website='$website', facebook='$facebook', twitter='$twitter', instagram='$instagram', linkedin='$linkedin', youtube='$youtube', pinterest='$pinterest', services='$services' WHERE username='$username' ");
 
 	}
 
