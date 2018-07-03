@@ -426,7 +426,8 @@
         <input type="file" id="image" name="image" class="inputfile" data-multiple-caption="{count} files selected" multiple />
         <label id="uploadImageTwo" for="image" class="text-center">
 					Choose a file...
-					<small><span style="color: #F7F8F9;"></span></small>
+					<br />
+					<small><span style="color: #FFFFFF;"></span></small>
 				</label>
         <br /><br />
         <!-- CROP AND SUBMIT BUTTON -->

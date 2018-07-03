@@ -1,5 +1,29 @@
 $(document).ready(function() {
 
+	// FUNCTION TO DISPLAY NAME OF FILE CHOSEN TO UPLOAD
+	var inputs = document.querySelectorAll('.inputfile');
+	Array.prototype.forEach.call( inputs, function(input) {
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+		// EVENT LISTENER
+		input.addEventListener('change', function(e) {
+			// CREATE FILENAME VARIABLE
+			var fileName = '';
+			// IF THERE IS MORE THAN ONE FILE SELECTED
+			if (this.files && this.files.length > 1) {
+				fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+			} else {
+				fileName = e.target.value.split('\\').pop();
+			}
+			// IF ONE FILE IS SELECTED
+			if (fileName) {
+				label.querySelector('span').innerHTML = fileName;
+			} else {
+				label.innerHTML = labelVal;
+			}
+		});
+	});
+
 	// ENABLE TOOLTIPS
   $('[data-toggle="tooltip"]').tooltip()
 
