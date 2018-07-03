@@ -90,8 +90,15 @@ tr:hover a {
 	color: #FFFFFF;
 }
 
+.client-info .fab {
+	margin-right: 5px;
+}
 
-
+.client-info button {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
 
 
 

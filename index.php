@@ -1,6 +1,6 @@
 <?php
 	include('includes/header.php');
-	include('includes/form_handlers/client_handler.php');
+	include('includes/form_handlers/add_client_handler.php');
 
 	$user_obj = new User($connection, $userLoggedIn);
 

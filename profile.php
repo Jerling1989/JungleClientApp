@@ -1,6 +1,7 @@
 <?php
 	// INCLUDE NECCESSARY FILES AND SCRIPTS
 	include('includes/header.php');
+	include('includes/form_handlers/edit_client_handler.php');
 
 	// CHECK IF USERNAME IS SET FOR URL
 	if(isset($_GET['profile_username'])) {
@@ -14,13 +15,10 @@
 	}
 ?>
 
-	<div  class="text-center">
-		<p>Welcome to the Client Profile <?php echo $client['first_name'] . ' ' . $client['last_name']; ?>!</p>
-	</div>
-
 	<br />
 
 	<div class="client-info col-md-12">
+		<!-- <h3 class="text-center">Client Details</h3> -->
 		<div class="row">
 			<div class="col-md-4">
 				<img src="<?php echo $client['profile_pic'] ?>">
@@ -28,6 +26,11 @@
 				<h5>Name: <?php echo $client['first_name'] . ' ' . $client['last_name']; ?></h5>
 				<h5>Company: <?php echo $client['company_name']; ?></h5>
 				<h5>Website: <?php echo $client['website']; ?></h5>
+				<i class="fab fa-facebook fa-lg"></i>
+				<i class="fab fa-twitter-square fa-lg"></i>
+				<i class="fab fa-instagram fa-lg"></i>
+				<i class="fab fa-linkedin fa-lg"></i>
+				<i class="fab fa-youtube-square fa-lg"></i>
 			</div>
 
 			<div class="col-md-8">
@@ -39,7 +42,7 @@
 				<h5>Services: <?php echo $client['services_array']; ?></h5>
 			</div>
 		</div>
-		
+		<button type="button" class="btn btn-outline-light btn-sm">Edit</button>
 	</div>
 	
 

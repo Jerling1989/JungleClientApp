@@ -44,10 +44,10 @@
 		$date = date('Y-m-d');
 
 		// DEFAULT PROFILE PICTURE PATH
-		$profile_pic = 'assets/img/profile_pics/defaults/avatar.png';
+		$profile_pic = 'assets/img/profile_pics/default/avatar.png';
 
 		// RUN QUERY TO ADD CLIENT TO DATABASE
-		$query = mysqli_query($connection, "INSERT INTO clients VALUES ('', '$first_name', '$last_name', '$username', '$company', '', '', '$profile_pic', '', '', '', '', '', '', '', '', '', '$date', 'no', ',')");
+		$query = mysqli_query($connection, "INSERT INTO clients VALUES ('', '$first_name', '$last_name', '$username', '$company', '', '', '$profile_pic', '', '', '', '', '', '', '', '', '', '$date', 'no', '')");
 
 	}
 
