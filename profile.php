@@ -25,7 +25,6 @@
 				<h5>ID: <?php echo $client['id']; ?></h5>
 				<h5>Name: <?php echo $client['first_name'] . ' ' . $client['last_name']; ?></h5>
 				<h5>Company: <?php echo $client['company_name']; ?></h5>
-				<h5>Website: <?php echo $client['website']; ?></h5>
 				<i class="fab fa-facebook fa-lg"></i>
 				<i class="fab fa-twitter-square fa-lg"></i>
 				<i class="fab fa-instagram fa-lg"></i>
@@ -34,15 +33,120 @@
 			</div>
 
 			<div class="col-md-8">
+				<h5>Website: <?php echo $client['website']; ?></h5>
+				<h5>Email: <?php echo $client['email']; ?></h5>
+				<h5>Phone: <?php echo $client['phone_number']; ?></h5>
 				<h5>Street: <?php echo $client['street_address']; ?></h5>
 				<h5>City: <?php echo $client['city']; ?></h5>
 				<h5>State: <?php echo $client['state']; ?></h5>
-				<h5>Email: <?php echo $client['email']; ?></h5>
-				<h5>Phone: <?php echo $client['phone_number']; ?></h5>
 				<h5>Services: <?php echo $client['services_array']; ?></h5>
 			</div>
 		</div>
-		<button type="button" class="btn btn-outline-light btn-sm">Edit</button>
+
+		<br />
+
+		<button type="button" class="btn btn-outline-light btn-sm" data-toggle="collapse" data-target="#edit_client" aria-expanded="false" aria-controls="edit_client">Edit</button>
+
+		<div class="collapse" id="edit_client">
+		  <div class="card card-body">
+		    <form class="" action="index.php" method="POST">
+
+				  <div class="row">
+				    <div class="col-12 col-md-3 form-group">
+				    	<label for="first_name">First Name</label>
+				      <input type="text" class="form-control" name="first_name" placeholder="First Name" required value="<?php echo $client['first_name']; ?>" />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-3 form-group">
+				    	<label for="last_name">Last Name</label>
+				      <input type="text" class="form-control" name="last_name" placeholder="Last Name" required value="<?php echo $client['last_name']; ?>" />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-3 form-group">
+				    	<label for="company">Company</label>
+				      <input type="text" class="form-control" name="company" placeholder="Company" required  value="<?php echo $client['company_name']; ?>" />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-3 form-group">
+				    	<label for="website">Website</label>
+				      <input type="text" class="form-control" name="website" placeholder="www.example.com" required value="<?php echo $client['website']; ?>" />
+				    </div>
+				    <br /><br />
+				  </div>
+
+				  
+
+				  <div class="row">
+				    <div class="col-12 col-md-4 form-group">
+				    	<label for="street">Street</label>
+				      <input type="text" class="form-control" name="street" placeholder="42 Wallaby Way" required value="<?php echo $client['street_address']; ?>" />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-4 form-group">
+				    	<label for="city">City</label>
+				      <input type="text" class="form-control" name="city" placeholder="City" required value="<?php echo $client['city']; ?>" />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-4 form-group">
+				    	<label for="state">State</label>
+				      <input type="text" class="form-control" name="state" placeholder="State" required value="<?php echo $client['state']; ?>" />
+				    </div>
+				    <br /><br />
+				  </div>
+
+				  <div class="row">
+				    <div class="col-12 col-md-4 form-group">
+				      <input type="email" class="form-control" name="email" placeholder="Email" required />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-4 form-group">
+				      <input type="text" class="form-control" name="phone" placeholder="Phone" required />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-4 form-group">
+				      <input type="text" class="form-control" name="services" placeholder="Services" required />
+				    </div>
+				    <br /><br />
+				  </div>
+
+
+				  <div class="row">
+				  	<div class="col-12 col-md-2 form-group">
+				      <input type="text" class="form-control" name="facebook" placeholder="Facebook" required />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-2 form-group">
+				      <input type="text" class="form-control" name="twitter" placeholder="Twitter" required />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-2 form-group">
+				      <input type="text" class="form-control" name="instagram" placeholder="Instagram" required />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-2 form-group">
+				      <input type="text" class="form-control" name="linkedin" placeholder="LinkedIn" required />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-2 form-group">
+				      <input type="text" class="form-control" name="YouTube" placeholder="YouTube" required />
+				    </div>
+				    <br /><br />
+				    <div class="col-12 col-md-2 form-group">
+				      <input type="text" class="form-control" name="services" placeholder="Services" required />
+				    </div>
+				    <br /><br />
+				  </div>
+
+				  <div class="row">
+				  	<div class="col-12">
+				  		<input type="submit" class="btn btn-success btn-block" name="edit_client" value="Submit" />
+				  	</div>
+			      
+			    </div>
+				</form>
+		  </div>
+		</div>
+
 	</div>
 	
 
