@@ -25,12 +25,26 @@
 				<h5>ID: <?php echo $client['id']; ?></h5>
 				<h5>Name: <?php echo $client['first_name'] . ' ' . $client['last_name']; ?></h5>
 				<h5>Company: <?php echo $client['company_name']; ?></h5>
-				<i class="fab fa-facebook fa-lg"></i>
-				<i class="fab fa-twitter-square fa-lg"></i>
-				<i class="fab fa-instagram fa-lg"></i>
-				<i class="fab fa-linkedin fa-lg"></i>
-				<i class="fab fa-youtube-square fa-lg"></i>
-				<i class="fab fa-pinterest-p fa-lg"></i>
+
+				<a href="<?php echo $client['facebook']; ?>">
+					<i class="fab fa-facebook fa-lg"></i>
+				</a>
+				<a href="<?php echo $client['twitter']; ?>">
+					<i class="fab fa-twitter-square fa-lg"></i>
+				</a>
+				<a href="<?php echo $client['instagram']; ?>">
+					<i class="fab fa-instagram fa-lg"></i>
+				</a>
+				<a href="<?php echo $client['linkedin']; ?>">
+					<i class="fab fa-linkedin fa-lg"></i>
+				</a>
+				<a href="<?php echo $client['youtube']; ?>">
+					<i class="fab fa-youtube-square fa-lg"></i>
+				</a>
+				<a href="<?php echo $client['pinterest']; ?>">
+					<i class="fab fa-pinterest-p fa-lg"></i>
+				</a>
+				
 			</div>
 
 			<div class="col-md-8">
@@ -141,10 +155,8 @@
 				    </div>
 				  </div>
 
-					
-        	
-
 					<br />
+
 				  <div class="row">
 				  	<div class="col-12">
 				  		<input type="submit" class="btn btn-success btn-block" name="edit_client" value="Submit" />

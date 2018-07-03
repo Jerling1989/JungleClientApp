@@ -84,6 +84,13 @@
 		  <div class="collapse navbar-collapse" id="navbarToggler">
 		    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
+		    	<!-- HOME PAGE -->
+		    	<li class="nav-item">
+		        <a class="nav-link" href="index.php" data-toggle="tooltip" data-placement="bottom" title="Home">
+		        	<i class="fas fa-home fa-2x"></i> <span class="mobile-nav">Home</span>
+		        </a>
+		      </li>
+
 		    	<!-- SETTINGS -->
 		      <li class="nav-item">
 		        <a class="nav-link" href="settings.php" data-toggle="tooltip" data-placement="bottom" title="Settings">

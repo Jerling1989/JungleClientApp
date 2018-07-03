@@ -11,7 +11,6 @@
 	</div>
 
 	<div id="add-client-div">
-
 	  <button class="btn btn-outline-light btn-block" type="button" data-toggle="collapse" data-target="#add_new_client" aria-expanded="false" aria-controls="add_new_client">
 	    Add New Client
 	  </button>
@@ -39,7 +38,6 @@
 				</form>
 		  </div>
 		</div>
-
 	</div>
 
 	<table class="table table-dark">
