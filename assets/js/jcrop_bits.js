@@ -24,8 +24,8 @@ $(function(){
   }; 
 //End JCrop Bits
 
-	function cancelCrop(){
+	function cancelCrop(path){
 		//Refresh page				
-		top.location = 'upload.php';
+		top.location = path;
 		return false;
 	}

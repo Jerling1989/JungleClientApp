@@ -477,7 +477,7 @@
 	        </div>
 					<!-- CANCEL BUTTON -->
 	        <div id="CropImageForm2" class="text-center" style="" >  
-            <form action="" method="post" onsubmit="return cancelCrop();">
+            <form action="" method="post" onsubmit="return cancelCrop($username);">
               <input type="submit" class="btn btn-danger" value="Cancel Crop" />
             </form>
 	        </div>              
