@@ -30,6 +30,7 @@
 				<i class="fab fa-instagram fa-lg"></i>
 				<i class="fab fa-linkedin fa-lg"></i>
 				<i class="fab fa-youtube-square fa-lg"></i>
+				<i class="fab fa-pinterest-p fa-lg"></i>
 			</div>
 
 			<div class="col-md-8">
@@ -39,7 +40,7 @@
 				<h5>Street: <?php echo $client['street_address']; ?></h5>
 				<h5>City: <?php echo $client['city']; ?></h5>
 				<h5>State: <?php echo $client['state']; ?></h5>
-				<h5>Services: <?php echo $client['services_array']; ?></h5>
+				<h5>Services: <?php echo $client['services']; ?></h5>
 			</div>
 		</div>
 
@@ -52,26 +53,26 @@
 		    <form class="" action="index.php" method="POST">
 
 				  <div class="row">
-				    <div class="col-12 col-md-3 form-group">
+				    <div class="col-6 col-md-3 form-group">
 				    	<label for="first_name">First Name</label>
 				      <input type="text" class="form-control" name="first_name" placeholder="First Name" required value="<?php echo $client['first_name']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-3 form-group">
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-3 form-group">
 				    	<label for="last_name">Last Name</label>
 				      <input type="text" class="form-control" name="last_name" placeholder="Last Name" required value="<?php echo $client['last_name']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-3 form-group">
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-3 form-group">
 				    	<label for="company">Company</label>
 				      <input type="text" class="form-control" name="company" placeholder="Company" required  value="<?php echo $client['company_name']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-3 form-group">
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-3 form-group">
 				    	<label for="website">Website</label>
 				      <input type="text" class="form-control" name="website" placeholder="www.example.com" required value="<?php echo $client['website']; ?>" />
 				    </div>
-				    <br /><br />
+				    <!-- <br /><br /> -->
 				  </div>
 
 				  
@@ -81,60 +82,69 @@
 				    	<label for="street">Street</label>
 				      <input type="text" class="form-control" name="street" placeholder="42 Wallaby Way" required value="<?php echo $client['street_address']; ?>" />
 				    </div>
-				    <br /><br />
+				    <!-- <br /><br /> -->
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="city">City</label>
-				      <input type="text" class="form-control" name="city" placeholder="City" required value="<?php echo $client['city']; ?>" />
+				      <input type="text" class="form-control" name="city" placeholder="Dallas" required value="<?php echo $client['city']; ?>" />
 				    </div>
-				    <br /><br />
+				    <!-- <br /><br /> -->
 				    <div class="col-12 col-md-4 form-group">
 				    	<label for="state">State</label>
-				      <input type="text" class="form-control" name="state" placeholder="State" required value="<?php echo $client['state']; ?>" />
+				      <input type="text" class="form-control" name="state" placeholder="Texas" required value="<?php echo $client['state']; ?>" />
 				    </div>
-				    <br /><br />
+				    <!-- <br /><br /> -->
 				  </div>
 
 				  <div class="row">
-				    <div class="col-12 col-md-4 form-group">
-				      <input type="email" class="form-control" name="email" placeholder="Email" required />
+				    <div class="col-6 col-md-4 form-group">
+				    	<label for="email">Email</label>
+				      <input type="email" class="form-control" name="email" placeholder="contact@example.com" required value="<?php echo $client['email']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-4 form-group">
-				      <input type="text" class="form-control" name="phone" placeholder="Phone" required />
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-4 form-group">
+				    	<label for="phone">Phone</label>
+				      <input type="text" class="form-control" name="phone" placeholder="(855) 555-1246" required value="<?php echo $client['phone_number']; ?>" />
 				    </div>
-				    <br /><br />
+				    <!-- <br /><br /> -->
 				    <div class="col-12 col-md-4 form-group">
-				      <input type="text" class="form-control" name="services" placeholder="Services" required />
+				    	<label for="services">Services</label>
+				      <input type="text" class="form-control" name="services" placeholder="Ex. Google Adwords, SEO, Facebook..." required value="<?php echo $client['services']; ?>" />
 				    </div>
-				    <br /><br />
+				    <!-- <br /><br /> -->
 				  </div>
 
 
 				  <div class="row">
-				  	<div class="col-12 col-md-2 form-group">
-				      <input type="text" class="form-control" name="facebook" placeholder="Facebook" required />
+				  	<div class="col-6 col-md-2 form-group">
+				  		<label for="facebook">Facebook</label>
+				      <input type="text" class="form-control" name="facebook" placeholder="https://www.facebook.com/example" required value="<?php echo $client['facebook']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-2 form-group">
-				      <input type="text" class="form-control" name="twitter" placeholder="Twitter" required />
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-2 form-group">
+				    	<label for="twitter">Twitter</label>
+				      <input type="text" class="form-control" name="twitter" placeholder="https://twitter.com/example" required value="<?php echo $client['twitter']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-2 form-group">
-				      <input type="text" class="form-control" name="instagram" placeholder="Instagram" required />
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-2 form-group">
+				    	<label for="instagram">Instagram</label>
+				      <input type="text" class="form-control" name="instagram" placeholder="https://instagram.com/example" required value="<?php echo $client['instagram']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-2 form-group">
-				      <input type="text" class="form-control" name="linkedin" placeholder="LinkedIn" required />
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-2 form-group">
+				    	<label for="linkedin">LinkedIn</label>
+				      <input type="text" class="form-control" name="linkedin" placeholder="https://linkedin.com/in/example" required value="<?php echo $client['linkedin']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-2 form-group">
-				      <input type="text" class="form-control" name="YouTube" placeholder="YouTube" required />
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-2 form-group">
+				    	<label for="youtube">YouTube</label>
+				      <input type="text" class="form-control" name="youtube" placeholder="https://youtube.com/example" required value="<?php echo $client['youtube']; ?>" />
 				    </div>
-				    <br /><br />
-				    <div class="col-12 col-md-2 form-group">
-				      <input type="text" class="form-control" name="services" placeholder="Services" required />
+				    <!-- <br /><br /> -->
+				    <div class="col-6 col-md-2 form-group">
+				    	<label for="pinterest">Pinterest</label>
+				      <input type="text" class="form-control" name="pinterest" placeholder="https://pinterest.com/example" required value="<?php echo $client['pinterest']; ?>" />
 				    </div>
-				    <br /><br />
+				    <!-- <br /><br /> -->
 				  </div>
 
 				  <div class="row">
