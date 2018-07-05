@@ -28,27 +28,27 @@
 				<h5>Name: <?php echo $client['first_name'] . ' ' . $client['last_name']; ?></h5>
 				<h5>Company: <?php echo $client['company_name']; ?></h5>
 				<!-- FACEBOOK -->
-				<a href="<?php echo $client['facebook']; ?>">
+				<a target="_blank" href="<?php echo $client['facebook']; ?>">
 					<i class="fab fa-facebook fa-lg"></i>
 				</a>
 				<!-- TWITTER -->
-				<a href="<?php echo $client['twitter']; ?>">
+				<a target="_blank" href="<?php echo $client['twitter']; ?>">
 					<i class="fab fa-twitter-square fa-lg"></i>
 				</a>
 				<!-- INSTAGRAM -->
-				<a href="<?php echo $client['instagram']; ?>">
+				<a target="_blank" href="<?php echo $client['instagram']; ?>">
 					<i class="fab fa-instagram fa-lg"></i>
 				</a>
 				<!-- LINKEDIN -->
-				<a href="<?php echo $client['linkedin']; ?>">
+				<a target="_blank" href="<?php echo $client['linkedin']; ?>">
 					<i class="fab fa-linkedin fa-lg"></i>
 				</a>
 				<!-- YOUTUBE -->
-				<a href="<?php echo $client['youtube']; ?>">
+				<a target="_blank" href="<?php echo $client['youtube']; ?>">
 					<i class="fab fa-youtube-square fa-lg"></i>
 				</a>
 				<!-- PINTEREST -->
-				<a href="<?php echo $client['pinterest']; ?>">
+				<a target="_blank" href="<?php echo $client['pinterest']; ?>">
 					<i class="fab fa-pinterest-p fa-lg"></i>
 				</a>
 			</div>
