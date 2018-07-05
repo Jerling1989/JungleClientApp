@@ -103,7 +103,7 @@
 
 		    <!-- SEARCH FORM -->
 		    <form class="form-inline my-2 my-lg-0" id="user-search-form" action="search.php" method="GET" name="search_form">
-		      <input class="form-control mr-sm-2" type="text" onkeyup="getLiveSearchUsers(this.value, '<?php echo $userLoggedIn; ?>')" name="q" placeholder="Search..." autocomplete="off" id="search_text_input">
+		      <input class="form-control mr-sm-2" type="text" onkeyup="" name="q" placeholder="Search..." autocomplete="off" id="search_text_input">
 					<input type="submit" id="user-search-btn" value="">
 		    </form>
 

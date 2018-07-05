@@ -29,6 +29,7 @@ CREATE TABLE clients (
 	twitter VARCHAR (60),
 	linkedin VARCHAR (60),
 	youtube VARCHAR (60),
+	pinterest VARCHAR (60),
 	date_added DATE,
 	client_closed VARCHAR (3),
 	services_array TEXT,
