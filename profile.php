@@ -186,10 +186,10 @@
 		<!-- NEW TASK FORM -->
 		<form action="" method="POST">
 			<div class="row">
-				<div class="col-9 col-md-10">
+				<div class="col-8 col-sm-10">
 					<input type="text" class="form-control" name="task_name" placeholder="Add New Task" required />
 				</div>
-				<div class="col-3 col-md-2">
+				<div class="col-4 col-sm-2">
 					<input type="submit" class="btn btn-outline-light btn-block" name="add_task" value="Add" />
 				</div>
 			</div>
