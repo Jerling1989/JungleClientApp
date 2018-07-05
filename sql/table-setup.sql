@@ -32,7 +32,7 @@ CREATE TABLE clients (
 	pinterest VARCHAR (60),
 	date_added DATE,
 	client_closed VARCHAR (3),
-	services_array TEXT,
+	services TEXT,
 	PRIMARY KEY (id)
 ); 
 
