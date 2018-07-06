@@ -426,8 +426,8 @@
 		<!-- UPLOAD INSTRUCTIONS AND FORM -->
 		<div id="formExample">
 			<!-- INSTRUCTIONS -->
-			<p>Upload a new profile picture for the client's profile.</p>
-			<p>First click the "Add Image" button and choose a file from your computer.</p>
+			<p>Upload a new picture for the client's profile.</p>
+			<p>First click the "Choose a file..." button and select an image from your device.</p>
 			<p>After you have selected an image, hitting the "Submit" button will allow you the crop the image before setting it as the new profile picture.</p>
 			<br />
 	    <p><b> <?=$msg?> </b></p>
