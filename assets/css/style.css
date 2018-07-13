@@ -270,9 +270,9 @@ tr:hover a {
 #search-results {
 	background-color: #F7F8F9;
 	border: 1px solid #ACACAC;
-	border-bottom: none;
+	/*border-bottom: none;*/
 	border-top: none;
-	margin-top: 79px;
+	margin-top: 78px;
 	margin-left: 50px !important;
 	width: 300px;
 	position: fixed;
