@@ -114,6 +114,27 @@
 	<!-- END TOP NAV BAR -->
 
 	<br /><br /><br /><br />
+	<div id="search-results"></div>
+
+	<script>
+		$(document).ready(function() {
+			$('#search_text_input').keyup(function() {
+				var search = $('#search_text_input').val();
+
+				$.ajax({
+					url: 'includes/form_handlers/search_clients.php',
+					data: {search: search},
+					type: 'POST',
+					success: function(data) {
+						if(!data.error) {
+							$('#search-results').html(data);
+							console.log(data);
+						}
+					}
+				});
+			});
+		});
+	</script>
 
 	<!-- WRAPPER DIV -->
 	<div class="wrapper container" id="wrapper">

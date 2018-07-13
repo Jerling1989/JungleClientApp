@@ -3,6 +3,7 @@
 	include('includes/header.php');
 	include('includes/form_handlers/edit_client_handler.php');
 	include('includes/form_handlers/add_task_handler.php');
+	include('includes/timer.php');
 
 	// CHECK IF USERNAME IS SET FOR URL
 	if(isset($_GET['profile_username'])) {
