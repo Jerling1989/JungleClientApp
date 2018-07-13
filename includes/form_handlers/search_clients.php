@@ -14,11 +14,12 @@
 		while($row = mysqli_fetch_array($query)) {
 			$first_name = $row['first_name'];
 			$last_name = $row['last_name'];
+			$username = $row['username'];
 
 			?>
 			<ul class="list-unstyled">
 				<?php
-				echo "<li>$first_name $last_name</li>";
+				echo "<li><a href='$username'>$first_name $last_name</a></li>";
 				?>
 			</ul>
 			<?php
