@@ -132,7 +132,7 @@
 				var search = $('#search_text_input').val();
 
 				$.ajax({
-					url: 'includes/form_handlers/search_clients.php',
+					url: 'includes/handlers/ajax_client_search.php',
 					data: {search: search},
 					type: 'POST',
 					success: function(data) {
