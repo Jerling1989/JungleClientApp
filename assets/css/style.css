@@ -266,6 +266,20 @@ tr:hover a {
 }
 
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SEARCH RESULTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#search-results {
+	background-color: #F7F8F9;
+	border: 1px solid #ACACAC;
+	border-bottom: none;
+	border-top: none;
+	margin-top: 79px;
+	margin-left: 50px !important;
+	width: 300px;
+	position: fixed;
+	z-index: 3;
+}
+
+
 /*~~~~~~~~~~~~~ MOBILE TABLET SCREEN ~~~~~~~~~~~~~~*/
 @media (min-width: 768px) and (max-width: 991.98px) {
 

@@ -113,8 +113,18 @@
 	</nav>
 	<!-- END TOP NAV BAR -->
 
+	<!-- USER LIVE SEARCH DROPDOWN -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8"></div>
+			<div class="col-md-4">
+				<div id="search-results"></div>
+			</div>
+		</div>
+	</div>
+
 	<br /><br /><br /><br />
-	<div id="search-results"></div>
+
 
 	<script>
 		$(document).ready(function() {
