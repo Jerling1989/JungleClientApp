@@ -34,6 +34,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- FONT AWESOME LINKS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Luckiest+Guy" rel="stylesheet">
   <!-- RESET CSS LINK -->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
 	<!-- BOOTSTRAP CSS LINK -->
@@ -67,7 +69,7 @@
 
 			<!-- LOGO/HOMEPAGE LINK -->
 		  <a class="navbar-brand" href="index.php">
-		  	<img id="nav-pic" src="assets/img/icons/logo.png" />
+		  	<h3 id="header-logo">THE JUNGLE</h3>
 		  </a>
 
 			<!-- COLLAPSE TOGGLE BUTTON (MOBILE) -->

@@ -7,6 +7,14 @@
 	border-bottom: 5px #F5C562 solid;
 }
 
+#header-logo {
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 42px;
+	color: #262727;
+	text-shadow: 2px 1px #f5c562;
+	margin: 4px 0px -10px 0px;
+}
+
 #nav-pic {
 	height: 60px;
 	margin: -6px 0px -6px 0px;
