@@ -54,6 +54,13 @@ a:hover {
 	margin-bottom: 10px;
 }
 
+#login-logo {
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 98px;
+	color: #262727;
+	text-shadow: 2px 2px #f5c562;
+}
+
 .btn-primary {
 	margin-bottom: 20px;
 	padding: 5px 30px 5px 30px;

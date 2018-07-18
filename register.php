@@ -21,7 +21,7 @@
   <!-- FONT AWESOME -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Luckiest+Guy" rel="stylesheet">
   <!-- BOOTSTRAP CDN -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- RESET CSS LINK -->
@@ -58,8 +58,9 @@
 
 				<!-- LOGIN HEADER -->
 				<div id="login-header">
-					<img src="assets/img/icons/logo.png" class="img-fluid" alt="Responsive image">
-					<br /><br />
+					<br />
+					<h1 id="login-logo">THE JUNGLE</h1>
+					<br />
 					<p><i class="fas fa-caret-down fa-lg"></i> Login or Sign Up below! <i class="fas fa-caret-down fa-lg"></i></p>
 				</div>
 				<!-- END LOGIN HEADER -->
